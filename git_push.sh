@@ -2,7 +2,8 @@
 
 GITPATH=/home/garfield/文档
 ADD=$(git add .)
-COMMIT=$(git commit -m "$(date) ")
+DATE=$(date)
+COMMIT=$(git commit -m "$DATE")
 GITPUSH=$(git push blog master)
 cd $GITPATH
 $ADD
