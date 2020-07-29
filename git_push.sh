@@ -7,6 +7,7 @@ GITPUSH=$(git push blog master)
 GITPULL=$(git pull blog master)
 cd $GITPATH
 $ADD 
+git add img/
 git commit -m "$DATE"
 $GITPULL
 $GITPUSH
