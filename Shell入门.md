@@ -81,7 +81,7 @@ echo $@  #所有位置参数（不包括位置0），将其分别对待
 echo $#    #所有位置参数个数（不包括位置0）
 ```
 
-运行结果：![image-20200729104832276](/home/garfield/.config/Typora/typora-user-images/image-20200729104832276.png)
+运行结果：![image-20200729104832276](/home/garfield/文档/img/image-20200729104832276.png)
 
 
 
@@ -169,7 +169,7 @@ fi
               
 ```
 
-运行结果：![image-20200729115350196](/home/garfield/.config/Typora/typora-user-images/image-20200729115350196.png)
+运行结果：![image-20200729115350196](/home/garfield/文档/img/image-20200729115350196.png)
 
 
 
@@ -187,7 +187,7 @@ echo "All";;
 esac#case反写作结尾                                                                                    
 ```
 
-运行结果：![](/home/garfield/.config/Typora/typora-user-images/image-20200729120253939.png)
+运行结果：![](/home/garfield/文档/img/image-20200729120253939.png)
 
 
 
@@ -210,7 +210,7 @@ esac#case反写作结尾
      ~           
      ```
 
-     运行结果：![image-20200729122427926](/home/garfield/.config/Typora/typora-user-images/image-20200729122427926.png)
+     运行结果：![image-20200729122427926](/home/garfield/文档/img/image-20200729122427926.png)
 
      
 
@@ -227,7 +227,7 @@ esac#case反写作结尾
      echo "sum=$SUM"
      ```
 
-     运行结果：![image-20200729123824102](/home/garfield/.config/Typora/typora-user-images/image-20200729123824102.png)
+     运行结果：![image-20200729123824102](/home/garfield/文档/img/image-20200729123824102.png)
 
 * while
 
@@ -244,7 +244,7 @@ done
 echo "sum=$SUM"                      
 ```
 
-运行结果：![image-20200729124712225](/home/garfield/.config/Typora/typora-user-images/image-20200729124712225.png)
+运行结果：![image-20200729124712225](/home/garfield/文档/img/image-20200729124712225.png)
 
 
 
@@ -257,18 +257,31 @@ shell的内容：
 ```shell
 #!/bin/bash
 
-GITPATH=/home/garfield/文档 #本地仓库路径
-ADD=$(git add .) #添加所有文件到暂存区
-COMMIT=$(git commit -m "$(date) ")#提交到版本库并备注时间
-GITPUSH=$(git push blog master)#推送到远程库
+GITPATH=/home/garfield/文档
+ADD=$(git add .)
+COMMIT=$(git commit -m "$(date) ")
+GITPUSH=$(git push blog master)
 cd $GITPATH
 $ADD
 $COMMIT
 $GITPUSH
+#!/bin/bash
+
+GITPATH=/home/garfield/文档 #本地仓库路径
+ADD=$(git add .) #添加所有文件到暂存区
+DATE=$(date +%y%m%d)
+GITPUSH=$(git push blog master)#推送到远程库
+GITPULL=$(git pull blog master)#同步远程库到本地（防止冲突）
+cd $GITPATH
+$ADD
+git commit -m "$DATE"#提交到版本库并备注时间
+$GITPULL
+$GITPUSH
+~         
 ~                
 ```
 
-运行结果![image-20200729181134082](/home/garfield/.config/Typora/typora-user-images/image-20200729181134082.png)
+运行结果![image-20200729181134082](/home/garfield/文档/img/image-20200729181134082.png)
 
 定时任务内容：
 
