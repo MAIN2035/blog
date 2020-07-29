@@ -6,7 +6,7 @@
 
 ####  运行时数据区域
 
-<img src="/home/garfield/图片/blog/screenshot_2020_07_28T16_53_06+0800.png" alt="screenshot_2020_07_28T16_53_06+0800" style="zoom: 25%;" />
+<img src="img/screenshot_2020_07_28T16_53_06+0800.png" alt="screenshot_2020_07_28T16_53_06+0800" style="zoom: 25%;" />
 
 
 
