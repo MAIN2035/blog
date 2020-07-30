@@ -6,7 +6,7 @@
 
 ####  运行时数据区域
 
-<img src="img/screenshot_2020_07_28T16_53_06+0800.png" alt="screenshot_2020_07_28T16_53_06+0800" style="zoom: 25%;" />
+<img src="https://i.loli.net/2020/07/30/eLwO5syKpnhjivJ.png" style="zoom:25%;" />
 
 
 
@@ -25,3 +25,4 @@
   
 
 * 直接内存（不属于运行时数据区域）：基于通道与缓冲区的I/O方式，其使用Native函数库直接分配堆外内存，并通过存储在Java堆中的DirectByteBuffer对象作为这块内存的引用进行操作
+

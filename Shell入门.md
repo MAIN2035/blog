@@ -81,7 +81,7 @@ echo $@  #所有位置参数（不包括位置0），将其分别对待
 echo $#    #所有位置参数个数（不包括位置0）
 ```
 
-运行结果：![image-20200729104832276](./img/image-20200729104832276.png)
+运行结果：![image-20200729104832276](/home/garfield/文档/img/image-20200729104832276.png)
 
 
 
@@ -169,9 +169,9 @@ fi
               
 ```
 
-运行结果：![image-20200729115350196](./img/image-20200729115350196.png)
+运行结果：
 
-
+![](https://i.loli.net/2020/07/30/PoYBhMnImCUqXJc.png)
 
 * case
 
@@ -187,9 +187,7 @@ echo "All";;
 esac#case反写作结尾                                                                                    
 ```
 
-运行结果：![](./img/image-20200729120253939.png)
-
-
+运行结果：![](https://i.loli.net/2020/07/30/6OljZLWC3aex4tc.png)
 
 * for
 
@@ -210,7 +208,7 @@ esac#case反写作结尾
      ~           
      ```
 
-     运行结果：![image-20200729122427926](./img/image-20200729122427926.png)
+     运行结果：![](https://i.loli.net/2020/07/30/zZ9bsm1BAxUaDpg.png)
 
      
 
@@ -227,7 +225,7 @@ esac#case反写作结尾
      echo "sum=$SUM"
      ```
 
-     运行结果：![image-20200729123824102](./img/image-20200729123824102.png)
+     运行结果：![](https://i.loli.net/2020/07/30/V9IDSofWYpbBCx4.png)
 
 * while
 
@@ -244,11 +242,49 @@ done
 echo "sum=$SUM"                      
 ```
 
-运行结果：![image-20200729124712225](./img/image-20200729124712225.png)
+运行结果：![](https://i.loli.net/2020/07/30/2aT39NuVMWvfQsw.png)
 
+## 从控制台读入
 
+```shell
+#!/bin/bash
+read -p "你是一个哈皮（Yes/No）?" WHY#-p即附带提示，WHY保存输入值
+echo "$WHY"
 
+read -t 10 -p "你是一个哈皮（Yes/No）?" WHY#-t计时，超过定义的10s即停止输入
+echo "$WHY"
+```
 
+运行结果：![](https://i.loli.net/2020/07/30/aBqlR1KXzOfinP2.png)
+
+## 函数
+
+* 系统函数
+
+  1. basename [string] [suffix]
+     删掉所有的前缀包括最后一个(‘/’)字符,然后将余下的字符串显示出来。
+     指定了suffix,basename命令会将指定的后缀也去掉
+
+  2. dirname 
+     返回完整路径最后 / 的前面的部分
+
+     
+
+运行结果：![](https://i.loli.net/2020/07/30/dieGZhJHgxpIqoW.png)
+
+* 自定义函数
+
+```
+#!/bin/bash
+function getSum(){#不用写参数
+SUM=$[$2 + $1]
+echo "sum=$SUM"
+}
+getSum $1 $2#方法名后面是传入的参数
+~                  
+```
+
+运行结果：![](https://i.loli.net/2020/07/30/i6Vl2WEH9ro31qS.png)
 
 ## GitHub自动提交远程库实例
 
@@ -281,14 +317,13 @@ $GITPUSH
 ~                
 ```
 
-运行结果![image-20200729181134082](./img/image-20200729181134082.png)
+运行结果![](https://i.loli.net/2020/07/30/v6ble3USd8YIgpk.png)
 
 定时任务内容：
 
 ```
-
+*20*** /home/garfield/文档/git_push.sh
 ```
 
+![](https://i.loli.net/2020/07/30/4okIgw3ZSYuJ7s8.png) 
 
-
- 
