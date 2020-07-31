@@ -81,7 +81,7 @@ echo $@  #所有位置参数（不包括位置0），将其分别对待
 echo $#    #所有位置参数个数（不包括位置0）
 ```
 
-运行结果：![image-20200729104832276](/home/garfield/文档/img/image-20200729104832276.png)
+运行结果：![](https://i.loli.net/2020/07/30/QHgrA1v4Y5lCZjT.png)
 
 
 
