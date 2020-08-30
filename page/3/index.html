@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>加菲先生の博客</title><meta name="description" content="加菲先生の博客,专注WEB领域,我思故我在"><meta name="author" content="Garfield Chiu"><meta name="copyright" content="Garfield Chiu"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://main2035.github.io/page/3/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta property="og:type" content="website"><meta property="og:title" content="加菲先生の博客"><meta property="og:url" content="https://main2035.github.io/page/3/"><meta property="og:site_name" content="加菲先生の博客"><meta property="og:description" content="加菲先生の博客,专注WEB领域,我思故我在"><meta property="og:image" content="http://img.lbkzw.cn/img/20200821103014.jpg"><meta property="article:published_time" content="2020-08-30T11:21:48.786Z"><meta property="article:modified_time" content="2020-08-30T11:21:48.786Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2020-08-30 19:21:48'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 5.0.1"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="http://img.lbkzw.cn/img/20200821103014.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">28</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">12</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(http://img.lbkzw.cn/img/20200821103101.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">加菲先生の博客</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">加菲先生の博客</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/MAIN2035" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:gfchiu@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/30/thread-03/" title="Lock对象">     <img class="post_bg" data-lazy-src="http://img.lbkzw.cn/img/20200821104536.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Lock对象"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/30/thread-03/" title="Lock对象">Lock对象</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-30T11:17:25.115Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-30T10:48:30.000Z" title="更新于 2020-08-30 18:48:30">2020-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/">Java多线程编程</a></span></div><div class="content">ReentrantLockTestjdk5加入的，synchronized增强版
+lock( ) unlock( )  condition.await( ) **condition.signal( )**等
+lock( )**获取锁，unlock**释放锁（同步代码处在lock、unlock之间）
+condition.await( )**效果同wait( )**,调用此方法前，该线程必须获得锁
+condition.signal( ),唤醒线程，效果同notify（）。
+condition.signalAll( )**，唤醒所有线程（倒序）效果同notifyAll（）**
+
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849package cn.day.b7;import cn.day.b6.MyThread;import java.util.concurrent.locks.Condition;import java.util.concurrent.locks ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/30/thread-04/" title="线程加载与线程组">     <img class="post_bg" data-lazy-src="http://img.lbkzw.cn/img/20200821104536.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="线程加载与线程组"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/30/thread-04/" title="线程加载与线程组">线程加载与线程组</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-30T11:17:25.115Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-30T10:48:30.000Z" title="更新于 2020-08-30 18:48:30">2020-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/">Java多线程编程</a></span></div><div class="content">饿汉模式(立即加载)
+使用类时已创建对象
+
+123456789101112131415161718192021222324package cn.day.b8;public class MyObject &#123;    private static MyObject myObject = new MyObject();//使用类时已创建对象    public static MyObject getInstance()&#123;        return myObject;    &#125;&#125;class Thread1 extends Thread &#123;    @Override    public void run()&#123;        System.out.println(MyObject.getInstance().hashCode());    &#125;&#125;class Run&#123;    public static void main(String[] args) &#123;        var t1 = new Thre ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/30/two-b-01/" title="南京汪伪政权">     <img class="post_bg" data-lazy-src="http://img.lbkzw.cn/img/20200821104536.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="南京汪伪政权"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/30/two-b-01/" title="南京汪伪政权">南京汪伪政权</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-30T11:17:25.115Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-30T10:48:30.000Z" title="更新于 2020-08-30 18:48:30">2020-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%8E%86%E5%8F%B2/">历史</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E4%BA%8C%E6%88%98/">二战</a></span></div><div class="content">南京汪伪政权于1940年3月30日在南京建立，此政府与日本签订了一系列条约，如加强政治、经济、文化合作，战后日本仍在内蒙与华北驻军等。
+条约的目的旨在于由日本控制战后中国的经济政治。
+汪精卫
+这是一个在政治斗争中失意的人，他迫切的需要，需要借助一股力量“重振雄风”而不论它来自哪里。
+直到其生命的最后一刻，政治的梦魇也未能散却，转而赠予千古骂名。
+
+汪精卫，系孙中山亲信，国民党元老，且国民党中威信极高。
+于1938年背叛革命。
+对于汪伪政权签订一系列傀儡条约，汪曾发出这样徒然的恳求：“将这样屈辱的条款加于中国人，是自找绝路。凡有人格、尊严的中国人都不会抛弃正统的中国政府，转而加入一个显而易见的傀儡、工具般的政府。只有对南京做出让步，给予真正平等、独立的地位，日本才可能使重庆听取安抚与暗中和平的建议。”
+轴心国与协约国协约国始终保持“欧洲第一”的战略，即欧洲是首要战场一切物资军需优先供给苏联与英国；
+只要中国军队坚持抗战而不与日军姌和，那么就保证中国战后的独立与自由，并在战时给予支援（更多的是军需物资，军队几乎没有）。
+轴心国（这里指日本），1943年南京汪伪政权向美、英宣战，东条英机（甲 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/30/thread-01/" title="线程方法">     <img class="post_bg" data-lazy-src="http://img.lbkzw.cn/img/20200821104536.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="线程方法"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/30/thread-01/" title="线程方法">线程方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-30T11:17:25.115Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-30T10:48:30.000Z" title="更新于 2020-08-30 18:48:30">2020-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/">Java多线程编程</a></span></div><div class="content">
+实现多线程必须继承Thread类，已有父类的类可通过实现Runnable实现多线程
+Thread也实现了Runnable接口，Runnable接口实现的多线程步骤比Thread更为繁琐
+
+线程安全共享变量
+这是一个不共享变量的线程：
+
+1234567891011121314151617181920212223242526package cn.day.b2;public class MyThread extends Thread &#123;    private int count = 5;    public MyThread(String name)&#123;        super();        this.setName(name);    &#125;    @Override    public void run()&#123;        super.run();        while (count &gt; 0)&#123;            count--;            System.out.println(&quot;由&quot; + ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/30/thread-02/" title="线程安全与通信">     <img class="post_bg" data-lazy-src="http://img.lbkzw.cn/img/20200821104518.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="线程安全与通信"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/30/thread-02/" title="线程安全与通信">线程安全与通信</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-30T11:17:25.115Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-30T10:48:30.000Z" title="更新于 2020-08-30 18:48:30">2020-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/">Java多线程编程</a></span></div><div class="content">线程优先级
+线程优先级具有可继承性
+
+cpu将资源让与优先级更高的线程（运行更快）
+
+随机性：并不是执行完高优先级线程再执行低优先级线程，只是说首先执行高优先级线程的概率更大一点
+
+可使用**setPriority( )**设置优先级（范围：0-10）
+
+Jdk预设了3个优先级值： 
+123MIN_PRIORITY &#x3D; 1NORM_PRIORITY &#x3D; 5MAX_PRIORITY &#x3D; 10
+
+
+
+守护线程
+Java中存在用户线程、守护线程两种线程
+守护线程为其它线程运行提供便利，如GC
+最后一个用户线程、守护线程退出，进程也就结束了（只要有一个用户进程在运行，那么这个进程就不会结束）               
+
+12345678910111213141516171819202122232425262728293031package cn.day.b4;public class MyThread2 extends Thread &#123;    private int i = 1;    @Override    public void run()&# ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/30/Java-01/" title="接口">     <img class="post_bg" data-lazy-src="http://img.lbkzw.cn/img/20200821104527.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="接口"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/30/Java-01/" title="接口">接口</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-30T11:17:25.111Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-30T10:48:30.000Z" title="更新于 2020-08-30 18:48:30">2020-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Java%E5%9F%BA%E7%A1%80/">Java基础</a></span></div><div class="content">
+ 恰当的原则是优先使用类而不是接口。从类开始，如果使用接口的必要性变得很明确，那么就重构。接口是一个伟大的工具，但它们容易被滥用。
+
+接口中可添加静态方法与默认方法；
+一个类实现一个接口的同时必须实现该接口的所有方法（可以不用实现默认方法即关键词为为 default的方法）；
+extends 只能用于单一类，但是在构建接口时可以引用多个基类接口。注意到，接口名之间用逗号分隔。
+模板设计模式
+
+把方法抽象封装到接口或抽象类中，在别的类中对其进行实现即，变得是内容，而其框架则始终如一。
+就像我与大厨炒西红柿：大家都是加油、加鸡蛋、加西红柿。只是做出来时味道不同罢了。
+
+接口与抽象类（选择）
+
+
+特性
+接口
+抽象类
+
+
+
+组合
+新类可以组合多个接口
+只能继承单一抽象类
+
+
+状态
+不能包含属性（除了静态属性，不支持对象状态）
+可以包含属性，非抽象方法可能引用这些属性
+
+
+默认方法 和 抽象方法
+不需要在子类中实现默认方法。默认方法可以引用其他接口的方法
+必须在子类中实现抽象方法
+
+
+构造器
+没有构造器
+可以有构造器
+
+
+可见性
+隐式 public
+可以是 protected 或友元
+
+
+策略 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/30/hexo-01/" title="hexo for github的那些事情">     <img class="post_bg" data-lazy-src="http://img.lbkzw.cn/img/20200821104527.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo for github的那些事情"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/30/hexo-01/" title="hexo for github的那些事情">hexo for github的那些事情</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-30T11:17:25.111Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-30T10:48:30.000Z" title="更新于 2020-08-30 18:48:30">2020-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/hexo/">hexo</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/git/">git</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/github/">github</a></span></div><div class="content">
+首先申明：本篇并非安装hexo的教程，而是本人安装hexo时遇到的一些问题及解决方案。一站式部署hexo教程：官方文档本人操作均按hexo官方文档进行。按官方文档来，问题会比按网上的帖子少的多，且你遇到的问题一定有人已经遇到过，百度搜索你遇到的错误就很容易解决
+
+官方第一坑官方文档中用gh-pages分支，可是全程没有提到，仅仅用到的时候才提到，这个会出问题，不如从一开始就在gh-pages分支上进行
+创建gh-pages分支创建分支时主分支的版本库不能为空
+123456git init &#x2F;&#x2F;创建本地库git branch -v &#x2F;&#x2F;查看分支vim index.html &#x2F;&#x2F;创建文件（为win10用户请自行手动创建一个文件，仅仅提交版本库用）git add .git branch gh-pages&#x2F;&#x2F;创建分支
+官方第二坑文档没有明明白白的说deploy:的填写_config.yml中deploy:一定要填写好：
+1234deploy:  type: &#39;git&#39;  repo: 你远程库的ss ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/30/Java-02/" title="集合">     <img class="post_bg" data-lazy-src="http://img.lbkzw.cn/img/20200821103419.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="集合"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/30/Java-02/" title="集合">集合</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-30T11:17:25.111Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-30T10:48:30.000Z" title="更新于 2020-08-30 18:48:30">2020-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Java%E5%9F%BA%E7%A1%80/">Java基础</a></span></div><div class="content">
+在编程时，可以将任意数量的对象放置在集合中，而不用关心集合应该有多大。
+基本的集合： Map ， List ， Set 和 Queue 
+
+
+集合不能保存基本类型，但自动装箱机制会负责执行基本类型和集合中保存的包装类型之间的双向转换。
+Set （元组）不接受重复元素。 HashSet 提供最快的查询速度，而 TreeSet 保持元素处于排序状态。 LinkedHashSet 按插入顺序保存其元素，但使用散列提供快速访问的能力。
+Map （字典）是一种将对象（而非数字）与对象相关联的设计。 HashMap 专为快速访问而设计，而 TreeMap 保持键始终处于排序状态，所以没有 HashMap 快。 LinkedHashMap 按插入顺序保存其元素，但使用散列提供快速访问的能力。
+
+结构图123456789101112131415161718192021222324252627282930313233343536373839import java.util.*;class Apple &#123;  private static long counter;  private final ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="http://img.lbkzw.cn/img/20200821103014.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Garfield Chiu</div><div class="author-info__description">加菲先生の博客,专注WEB领域,我思故我在</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">28</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">12</div></a></div><div class="card-info-data-item is-center"><a href="/categories"><div class="headline">分类</div><div class="length_num">6</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/MAIN2035" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:gfchiu@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/08/30/JS-01/" title="JS作用域"><img class="aside-post-bg" data-lazy-src="http://img.lbkzw.cn/img/20200821104518.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JS作用域"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/08/30/JS-01/" title="JS作用域">JS作用域</a><time class="aside-post_meta post-meta-date" datetime="2020-08-30T11:17:25.115Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/08/30/Java-03/" title="函数式编程"><img class="aside-post-bg" data-lazy-src="http://img.lbkzw.cn/img/20200821104536.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="函数式编程"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/08/30/Java-03/" title="函数式编程">函数式编程</a><time class="aside-post_meta post-meta-date" datetime="2020-08-30T11:17:25.115Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/08/30/Java-04/" title="流的创建与基础操作"><img class="aside-post-bg" data-lazy-src="http://img.lbkzw.cn/img/20200821104443.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="流的创建与基础操作"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/08/30/Java-04/" title="流的创建与基础操作">流的创建与基础操作</a><time class="aside-post_meta post-meta-date" datetime="2020-08-30T11:17:25.115Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/08/30/Java-05/" title="流的创建与基础操作"><img class="aside-post-bg" data-lazy-src="http://img.lbkzw.cn/img/20200821104536.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="流的创建与基础操作"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/08/30/Java-05/" title="流的创建与基础操作">流的创建与基础操作</a><time class="aside-post_meta post-meta-date" datetime="2020-08-30T11:17:25.115Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time></div></div><div class="aside-recent-post"><a class="aside-post-cover" href="/2020/08/30/Java-06/" title="终端操作(收集)"><img class="aside-post-bg" data-lazy-src="http://img.lbkzw.cn/img/20200821104443.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="终端操作(收集)"/></a><div class="aside-post-info"><a class="aside-post-title" href="/2020/08/30/Java-06/" title="终端操作(收集)">终端操作(收集)</a><time class="aside-post_meta post-meta-date" datetime="2020-08-30T11:17:25.115Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/JS/"><span class="card-category-list-name">JS</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/SQL/"><span class="card-category-list-name">SQL</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Ubuntu/"><span class="card-category-list-name">Ubuntu</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8E%86%E5%8F%B2/"><span class="card-category-list-name">历史</span><span class="card-category-list-count">1</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/JS%E5%9F%BA%E7%A1%80/" style="font-size: 20.8px; color: #99a6b7">JS基础</a> <a href="/tags/JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 16px; color: #999">JVM虚拟机</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 22px; color: #99a9bf">Java基础</a> <a href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/" style="font-size: 19.6px; color: #99a3b0">Java多线程编程</a> <a href="/tags/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 18.4px; color: #999fa8">Java设计模式</a> <a href="/tags/Jvm%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 17.2px; color: #999ca1">Jvm虚拟机</a> <a href="/tags/SQL%E5%85%A5%E9%97%A8/" style="font-size: 16px; color: #999">SQL入门</a> <a href="/tags/git/" style="font-size: 16px; color: #999">git</a> <a href="/tags/github/" style="font-size: 16px; color: #999">github</a> <a href="/tags/hexo/" style="font-size: 16px; color: #999">hexo</a> <a href="/tags/shell/" style="font-size: 16px; color: #999">shell</a> <a href="/tags/%E4%BA%8C%E6%88%98/" style="font-size: 16px; color: #999">二战</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">28</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">28</div></div><div class="webinfo-item"><div class="webinfo-site-wordcount-name">本站总字数 :</div><div class="webinfo-site-wordcount">40.9k</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Garfield Chiu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "也许多年后在某地，我将用轻声的叹息将往事回忆,I have a dream".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '也许多年后在某地，我将用轻声的叹息将往事回忆'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="ribbon" src="/js/third-party/canvas-ribbon.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="null" src="/js/third-party/canvas-nest.js"></script></div></body></html>

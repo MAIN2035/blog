@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>追踪式垃圾回收算法 | 加菲先生の博客</title><meta name="description" content="四种引用： 强引用：指程序中普遍存在的引用赋值；被强引用关联的对象只要强引用关系存在，被引用的对象就不会被回收 软引用：指有用而非必须的对象；被软引用关联的对象在系统发生内存溢出之前会将其回收 弱引用：指非必须的对象（比软引用弱）；被弱引用关联的对象在下一次垃圾回收前无论内存是否足够，均将其回收 虚引用：无法通过此引用来取得对象实例，使用此引用只是为了在对象被回收时收到一个系统通知  分代收集 分"><meta name="keywords" content="Jvm虚拟机"><meta name="author" content="Garfield Chiu"><meta name="copyright" content="Garfield Chiu"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://main2035.github.io/2020/08/30/jvm-02/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta property="og:type" content="article"><meta property="og:title" content="追踪式垃圾回收算法"><meta property="og:url" content="https://main2035.github.io/2020/08/30/jvm-02/"><meta property="og:site_name" content="加菲先生の博客"><meta property="og:description" content="四种引用： 强引用：指程序中普遍存在的引用赋值；被强引用关联的对象只要强引用关系存在，被引用的对象就不会被回收 软引用：指有用而非必须的对象；被软引用关联的对象在系统发生内存溢出之前会将其回收 弱引用：指非必须的对象（比软引用弱）；被弱引用关联的对象在下一次垃圾回收前无论内存是否足够，均将其回收 虚引用：无法通过此引用来取得对象实例，使用此引用只是为了在对象被回收时收到一个系统通知  分代收集 分"><meta property="og:image" content="http://img.lbkzw.cn/img/20200821104443.jpg"><meta property="article:published_time" content="2020-08-30T11:17:25.115Z"><meta property="article:modified_time" content="2020-08-30T10:48:30.000Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2020-08-30 18:48:30'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 5.0.1"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="http://img.lbkzw.cn/img/20200821103014.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">28</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">12</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">四种引用：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E4%BB%A3%E6%94%B6%E9%9B%86"><span class="toc-number">2.</span> <span class="toc-text">分代收集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E8%AE%B0%E7%AE%97%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">标记算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E8%AE%B0%E6%B8%85%E9%99%A4%E7%AE%97%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">标记清除算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E8%AE%B0%E6%95%B4%E7%90%86%E7%AE%97%E6%B3%95"><span class="toc-number">3.2.</span> <span class="toc-text">标记整理算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E8%AE%B0%E5%A4%8D%E5%88%B6%E7%AE%97%E6%B3%95"><span class="toc-number">3.3.</span> <span class="toc-text">标记复制算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Appel%E5%BC%8F%E5%9B%9E%E6%94%B6%EF%BC%88%E6%A0%87%E8%AE%B0%E5%A4%8D%E5%88%B6%E7%AE%97%E6%B3%95%E7%9A%84%E6%94%B9%E8%BF%9B%EF%BC%89"><span class="toc-number">3.4.</span> <span class="toc-text">Appel式回收（标记复制算法的改进）</span></a></li></ol></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(http://img.lbkzw.cn/img/20200821104443.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">加菲先生の博客</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">追踪式垃圾回收算法</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-30T11:17:25.115Z" title="发表于 2020-08-30 19:17:25">2020-08-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-30T10:48:30.000Z" title="更新于 2020-08-30 18:48:30">2020-08-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Java/">Java</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">855</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="四种引用："><a href="#四种引用：" class="headerlink" title="四种引用："></a>四种引用：</h1><ol>
+<li>强引用：指程序中普遍存在的引用赋值；被强引用关联的对象<strong>只要强引用关系存在</strong>，被引用的对象就不会被回收</li>
+<li>软引用：指有用而非必须的对象；被软引用关联的对象在<strong>系统发生内存溢出之前</strong>会将其回收</li>
+<li>弱引用：指非必须的对象（比软引用弱）；被弱引用关联的对象<strong>在下一次垃圾回收前无论内存是否足够</strong>，均将其回收</li>
+<li>虚引用：无法通过此引用来取得对象实例，使用此引用<strong>只是为了在对象被回收时收到一个系统通知</strong></li>
+</ol>
+<h1 id="分代收集"><a href="#分代收集" class="headerlink" title="分代收集"></a>分代收集</h1><ul>
+<li>分代假说</li>
+</ul>
+<ol>
+<li>弱分代假说（新生代）：大多数对象都是朝生夕灭</li>
+<li>强分代假说（老年代）：对象熬过的收集次数越多就越难被回收</li>
+<li>跨代引用假说：跨代引用相对于同代引用仅占少数</li>
+</ol>
+<ul>
+<li>垃圾分类：根据强、弱分代假说，将<strong>Java堆</strong>分为两个内存区域分别<strong>存储新生代与老年代</strong>，每次回收后存活的新生代对象将逐步晋升到老年代中。</li>
+<li>老年代引用新生代：相互引用的两个对象应<strong>同生同灭</strong>，所以该<strong>新生代会逐步晋升</strong>到老年代中从而<strong>消除跨代引用</strong></li>
+<li>根据跨带引用假说，在新生代上建立全局数据结构“记忆集”，这个集合中标记存在<strong>跨代引用</strong>的老年代，收集扫描时仅扫描此集合中标识的老年代</li>
+</ul>
+<h1 id="标记算法"><a href="#标记算法" class="headerlink" title="标记算法"></a>标记算法</h1><h2 id="标记清除算法"><a href="#标记清除算法" class="headerlink" title="标记清除算法"></a>标记清除算法</h2><ul>
+<li><p>标记需要<strong>回收</strong>的对象，清除所有<strong>标记</strong>的对象</p>
+</li>
+<li><p>标记需要<strong>保</strong>存的对象，清除所有<strong>未标记</strong>的对象</p>
+</li>
+<li><p>缺点：<strong>标记清除算法</strong>需要大量的标记、清除动作，且清除后会产生大量不连续的内存空间（可能导致无法为大的对象分配内存）</p>
+</li>
+</ul>
+<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/19/3yCNL6twl1xVYFd.jpg" alt="screenshot_2020_07_31T12_32_20+0800" style="zoom:50%;" />
+
+<h2 id="标记整理算法"><a href="#标记整理算法" class="headerlink" title="标记整理算法"></a>标记整理算法</h2><ul>
+<li>标记过程与<strong>标记清除算法</strong>相同，但并不直接对可回收对象进行回收，而是让所有存活对象向内存空间一端移动，然后直接清除另外一端</li>
+<li>缺点：移动对象操作时需全程暂停用户应用程序</li>
+<li>和稀泥式解决方案：令虚拟机使用<strong>标记清除算法</strong>直到内存碎片化程度影响到对象内存分配，再使用<strong>标记整理算法</strong></li>
+</ul>
+<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/19/Pyc8XSEThekfHAI.jpg" alt="screenshot_2020_07_31T12_359+0800" style="zoom:50%;" />
+
+<h2 id="标记复制算法"><a href="#标记复制算法" class="headerlink" title="标记复制算法"></a>标记复制算法</h2><ul>
+<li><p>将内存分为两块，每次只使用一块，当这块内存满时将其中存活的对象复制到另一块内存中，并自我清除。</p>
+</li>
+<li><p>缺点：<strong>标记复制算法</strong>需要大量的内存空间，且内存中回收对象的数量直接影响着此算法的效率。</p>
+</li>
+<li><p>此算法常用于<strong>新生代</strong>回收</p>
+<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/19/PSIqUYjOnxXaJcs.jpg" alt="screenshot_2020_07_31T12_35_49+0800" style="zoom:50%;" />
+
+</li>
+</ul>
+<h2 id="Appel式回收（标记复制算法的改进）"><a href="#Appel式回收（标记复制算法的改进）" class="headerlink" title="Appel式回收（标记复制算法的改进）"></a>Appel式回收（标记复制算法的改进）</h2><ul>
+<li>将新生代分为一块较大的Eden空间与两块较小的Survivor空间。</li>
+<li>分配内存时使用Eden与一块Survivor，回收时将使用的Eden与Survivor上存活的对象复制到另一块Survivor上，并自我清除。</li>
+<li>当另一块Survivor空间装不下<strong>已使用</strong>的Eden与Survivor中的存活对象时，就会发生<strong>分配担保</strong>（装不下的存活对象直接晋升至老年代）</li>
+</ul>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Garfield Chiu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://main2035.github.io/2020/08/30/jvm-02/">https://main2035.github.io/2020/08/30/jvm-02/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://main2035.github.io" target="_blank">加菲先生の博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Jvm%E8%99%9A%E6%8B%9F%E6%9C%BA/">Jvm虚拟机</a></div><div class="post_share"><div class="social-share" data-image="http://img.lbkzw.cn/img/20200821104443.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="http://img.lbkzw.cn/img/20200825094841.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="http://img.lbkzw.cn/img/20200825094841.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li><li class="reward-item"><a href="http://img.lbkzw.cn/img/20200825094912.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="http://img.lbkzw.cn/img/20200825094912.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/08/30/jvm-01/"><img class="prev-cover" data-lazy-src="http://img.lbkzw.cn/img/20200821104443.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">运行时数据区域</div></div></a></div><div class="next-post pull-right"><a href="/2020/08/30/jvm-03/"><img class="next-cover" data-lazy-src="http://img.lbkzw.cn/img/20200821104536.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Class文件结构</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/08/30/jvm-01/" title="运行时数据区域"><img class="relatedPosts_cover" data-lazy-src="http://img.lbkzw.cn/img/20200821104443.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-30</div><div class="relatedPosts_title">运行时数据区域</div></div></a></div></div></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Garfield Chiu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font_plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font_minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="ribbon" src="/js/third-party/canvas-ribbon.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="null" src="/js/third-party/canvas-nest.js"></script></div></body></html>
