@@ -19,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>接口 - 加菲先生の博客</title>
+  <title>接口 - ThreeClothの博客</title>
   
     <meta name="keywords" content="Java基础">
   
@@ -81,8 +81,6 @@
       
         
         <a class="title flat-box" target="_self" href='/'>
-          
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
           
           
           
@@ -573,6 +571,14 @@
     <div class='footer'>
       
       
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2020\10\16\Java-03\" title="函数式编程" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">函数式编程</span></a><a class="item" href="\2020\10\16\Java-04\" title="流的创建与基础操作" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">流的创建与基础操作</span></a><a class="item" href="\2020\10\16\Java-06\" title="终端操作(收集)" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">终端操作(收集)</span></a><a class="item" href="\2020\10\16\Java-05\" title="Optional类" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">Optional类</span></a><a class="item" href="\2020\10\16\Java-07\" title="异常" rel="bookmark "><img src="http://img.lbkzw.cn/img/20200821102446.png" class="lazyload" data-srcset="http://img.lbkzw.cn/img/20200821102446.png" srcset="data:image/png;base64,666" /><span class="title">异常</span></a></div></section></div>
+      
       
         <div class='copyright'>
           <blockquote>
@@ -625,7 +631,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/Java-01/&title=接口 - 加菲先生の博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/Java-01/&title=接口 - ThreeClothの博客&summary="
           
           >
           
@@ -637,7 +643,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/Java-01/&title=接口 - 加菲先生の博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/Java-01/&title=接口 - ThreeClothの博客&summary="
           
           >
           
@@ -649,7 +655,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/Java-01/&title=接口 - 加菲先生の博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/Java-01/&title=接口 - ThreeClothの博客&summary="
           
           >
           
@@ -736,7 +742,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-text">迭代器设计模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this%E3%80%81new"><span class="toc-text">this、new</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-text">匿名内部类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-text">嵌套内部类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-text">继承内部类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">模板设计模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8A%BD%E8%B1%A1%E7%B1%BB%EF%BC%88%E9%80%89%E6%8B%A9%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">接口与抽象类（选择）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AD%96%E7%95%A5%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">策略设计模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E5%AD%97%E6%AE%B5"><span class="toc-number">4.</span> <span class="toc-text">常量字段</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">5.</span> <span class="toc-text">内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.1.</span> <span class="toc-text">迭代器设计模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this%E3%80%81new"><span class="toc-number">5.2.</span> <span class="toc-text">this、new</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">5.3.</span> <span class="toc-text">匿名内部类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">5.4.</span> <span class="toc-text">嵌套内部类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">5.5.</span> <span class="toc-text">继承内部类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">5.6.</span> <span class="toc-text"></span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -814,7 +820,7 @@
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+        <p><a href="/">Copyright © 2017-2020 ThreeCloth</a></p>
 
         </div>
       

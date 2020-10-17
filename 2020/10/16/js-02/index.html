@@ -19,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>变量&amp;&amp;语法 - 加菲先生の博客</title>
+  <title>变量&amp;&amp;语法 - ThreeClothの博客</title>
   
     <meta name="keywords" content="JS基础">
   
@@ -81,8 +81,6 @@
       
         
         <a class="title flat-box" target="_self" href='/'>
-          
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
           
           
           
@@ -526,6 +524,14 @@
     <div class='footer'>
       
       
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2020\10\16\JS-01\" title="JS作用域" rel="bookmark "><img src="http://img.lbkzw.cn/img/20200830120120.png" class="lazyload" data-srcset="http://img.lbkzw.cn/img/20200830120120.png" srcset="data:image/png;base64,666" /><span class="title">JS作用域</span></a><a class="item" href="\2020\10\16\js-03\" title="JS函数" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">JS函数</span></a><a class="item" href="\2020\10\16\js-04\" title="JS对象" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">JS对象</span></a><a class="item" href="\2020\10\16\js-05\" title="JS数组" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">JS数组</span></a></div></section></div>
+      
       
         <div class='copyright'>
           <blockquote>
@@ -578,7 +584,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/js-02/&title=变量&&语法 - 加菲先生の博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/js-02/&title=变量&&语法 - ThreeClothの博客&summary="
           
           >
           
@@ -590,7 +596,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/js-02/&title=变量&&语法 - 加菲先生の博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/js-02/&title=变量&&语法 - ThreeClothの博客&summary="
           
           >
           
@@ -602,7 +608,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/js-02/&title=变量&&语法 - 加菲先生の博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/js-02/&title=变量&&语法 - ThreeClothの博客&summary="
           
           >
           
@@ -687,7 +693,7 @@ RHS查找的目的是为了引用值
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A5%E6%A0%BC%E7%9B%B8%E7%AD%89"><span class="toc-text">&#x3D;&#x3D;&#x3D;严格相等</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text">&#x3D;&#x3D;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#in"><span class="toc-text">in</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#instanceof"><span class="toc-text">instanceof</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#function-%E5%A3%B0%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text">function 声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#for-in"><span class="toc-number">2.</span> <span class="toc-text">for-in</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#continue-break"><span class="toc-number">3.</span> <span class="toc-text">continue,break</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#with%E8%AF%AD%E5%8F%A5"><span class="toc-number">4.</span> <span class="toc-text">with语句</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-number">5.</span> <span class="toc-text">操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A5%E6%A0%BC%E7%9B%B8%E7%AD%89"><span class="toc-number">5.1.</span> <span class="toc-text">&#x3D;&#x3D;&#x3D;严格相等</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">5.2.</span> <span class="toc-text">&#x3D;&#x3D;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#in"><span class="toc-number">5.3.</span> <span class="toc-text">in</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#instanceof"><span class="toc-number">5.4.</span> <span class="toc-text">instanceof</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null%E3%80%81undefined"><span class="toc-number">6.</span> <span class="toc-text">null、undefined</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">7.</span> <span class="toc-text">类型转换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="toc-number">8.</span> <span class="toc-text">异常处理</span></a></li></ol>
     </div>
   </section>
 
@@ -765,7 +771,7 @@ RHS查找的目的是为了引用值
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+        <p><a href="/">Copyright © 2017-2020 ThreeCloth</a></p>
 
         </div>
       

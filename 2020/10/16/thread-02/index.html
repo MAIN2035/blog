@@ -19,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>线程安全与通信 - 加菲先生の博客</title>
+  <title>线程安全与通信 - ThreeClothの博客</title>
   
     <meta name="keywords" content="Java多线程编程">
   
@@ -81,8 +81,6 @@
       
         
         <a class="title flat-box" target="_self" href='/'>
-          
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
           
           
           
@@ -612,6 +610,14 @@
     <div class='footer'>
       
       
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2020\10\16\thread-03\" title="Lock对象" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">Lock对象</span></a><a class="item" href="\2020\10\16\thread-04\" title="线程加载与线程组" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">线程加载与线程组</span></a><a class="item" href="\2020\10\16\thread-05\" title="Thread与Runable" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">Thread与Runable</span></a><a class="item" href="\2020\10\16\thread-01\" title="线程方法" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">线程方法</span></a><a class="item" href="\2020\10\16\Java-01\" title="接口" rel="bookmark "><img src="http://img.lbkzw.cn/img/20200821084956.jpeg" class="lazyload" data-srcset="http://img.lbkzw.cn/img/20200821084956.jpeg" srcset="data:image/png;base64,666" /><span class="title">接口</span></a></div></section></div>
+      
       
         <div class='copyright'>
           <blockquote>
@@ -664,7 +670,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/thread-02/&title=线程安全与通信 - 加菲先生の博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/thread-02/&title=线程安全与通信 - ThreeClothの博客&summary="
           
           >
           
@@ -676,7 +682,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/thread-02/&title=线程安全与通信 - 加菲先生の博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/thread-02/&title=线程安全与通信 - ThreeClothの博客&summary="
           
           >
           
@@ -688,7 +694,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/thread-02/&title=线程安全与通信 - 加菲先生の博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/thread-02/&title=线程安全与通信 - ThreeClothの博客&summary="
           
           >
           
@@ -774,7 +780,7 @@ Thread也实现了Runnable接口，Runnable接口实现的多线程步骤比Thre
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%8F%E8%AF%BB"><span class="toc-text">脏读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81"><span class="toc-text">可重入锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#holdsLock%EF%BC%88%EF%BC%89"><span class="toc-text">holdsLock（）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-text">同步代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%81%E5%AF%B9%E8%B1%A1"><span class="toc-text">锁对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E7%9A%84%E9%94%81"><span class="toc-text">静态方法的锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#volatile%EF%BC%88synchronized%E4%B9%9F%E5%8F%AF%EF%BC%89"><span class="toc-text">volatile（synchronized也可）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wait-notify"><span class="toc-text">wait&#x2F;notify</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wait"><span class="toc-text">wait( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#notify"><span class="toc-text">notify( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#notifyAll"><span class="toc-text">notifyAll( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#join"><span class="toc-text">join( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ThreadLocal"><span class="toc-text">ThreadLocal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#inheritableThreadLocal"><span class="toc-text">inheritableThreadLocal</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">1.</span> <span class="toc-text">线程优先级</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">守护线程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8"><span class="toc-number">3.</span> <span class="toc-text">线程安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%8F%E8%AF%BB"><span class="toc-number">3.1.</span> <span class="toc-text">脏读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81"><span class="toc-number">3.2.</span> <span class="toc-text">可重入锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#holdsLock%EF%BC%88%EF%BC%89"><span class="toc-number">3.3.</span> <span class="toc-text">holdsLock（）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">3.4.</span> <span class="toc-text">同步代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%81%E5%AF%B9%E8%B1%A1"><span class="toc-number">3.5.</span> <span class="toc-text">锁对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E7%9A%84%E9%94%81"><span class="toc-number">3.6.</span> <span class="toc-text">静态方法的锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#volatile%EF%BC%88synchronized%E4%B9%9F%E5%8F%AF%EF%BC%89"><span class="toc-number">3.7.</span> <span class="toc-text">volatile（synchronized也可）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E9%80%9A%E4%BF%A1"><span class="toc-number">4.</span> <span class="toc-text">线程通信</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#wait-notify"><span class="toc-number">4.1.</span> <span class="toc-text">wait&#x2F;notify</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wait"><span class="toc-number">4.2.</span> <span class="toc-text">wait( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#notify"><span class="toc-number">4.3.</span> <span class="toc-text">notify( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#notifyAll"><span class="toc-number">4.4.</span> <span class="toc-text">notifyAll( )</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%BC%E5%90%88%E8%BF%90%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">综合运用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#join"><span class="toc-number">5.1.</span> <span class="toc-text">join( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ThreadLocal"><span class="toc-number">5.2.</span> <span class="toc-text">ThreadLocal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#inheritableThreadLocal"><span class="toc-number">5.3.</span> <span class="toc-text">inheritableThreadLocal</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -852,7 +858,7 @@ Thread也实现了Runnable接口，Runnable接口实现的多线程步骤比Thre
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+        <p><a href="/">Copyright © 2017-2020 ThreeCloth</a></p>
 
         </div>
       

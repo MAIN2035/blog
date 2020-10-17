@@ -19,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>request对象 - 加菲先生の博客</title>
+  <title>request对象 - ThreeClothの博客</title>
   
     <meta name="keywords" content="Tomcat">
   
@@ -81,8 +81,6 @@
       
         
         <a class="title flat-box" target="_self" href='/'>
-          
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
           
           
           
@@ -511,6 +509,14 @@
     <div class='footer'>
       
       
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2020\10\16\Java-01\" title="接口" rel="bookmark "><img src="http://img.lbkzw.cn/img/20200821084956.jpeg" class="lazyload" data-srcset="http://img.lbkzw.cn/img/20200821084956.jpeg" srcset="data:image/png;base64,666" /><span class="title">接口</span></a></div></section></div>
+      
       
         <div class='copyright'>
           <blockquote>
@@ -563,7 +569,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/TomCat-01/&title=request对象 - 加菲先生の博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/TomCat-01/&title=request对象 - ThreeClothの博客&summary="
           
           >
           
@@ -575,7 +581,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/TomCat-01/&title=request对象 - 加菲先生の博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/TomCat-01/&title=request对象 - ThreeClothの博客&summary="
           
           >
           
@@ -587,7 +593,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/TomCat-01/&title=request对象 - 加菲先生の博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/TomCat-01/&title=request对象 - ThreeClothの博客&summary="
           
           >
           
@@ -672,7 +678,7 @@ cookie存储数据在客户端浏览器
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E5%A4%B4%E4%BE%8B%E5%AD%90%EF%BC%9A%EF%BC%88%E5%88%A4%E6%96%AD%E5%AE%A2%E6%88%B7%E7%AB%AF%EF%BC%8C%E8%AE%BE%E7%BD%AE%E9%98%B2%E7%9B%97%E9%93%BE%E7%AD%89%EF%BC%89"><span class="toc-text">请求头例子：（判断客户端，设置防盗链等）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#POST%E6%96%B9%E5%BC%8F%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98"><span class="toc-text">POST方式乱码问题</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E8%A1%8C%E4%BF%A1%E6%81%AF"><span class="toc-number">1.</span> <span class="toc-text">获取请求行信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E5%A4%B4%E4%BF%A1%E6%81%AF"><span class="toc-number">2.</span> <span class="toc-text">获取请求头信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E5%A4%B4%E4%BE%8B%E5%AD%90%EF%BC%9A%EF%BC%88%E5%88%A4%E6%96%AD%E5%AE%A2%E6%88%B7%E7%AB%AF%EF%BC%8C%E8%AE%BE%E7%BD%AE%E9%98%B2%E7%9B%97%E9%93%BE%E7%AD%89%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">请求头例子：（判断客户端，设置防盗链等）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E4%BD%93%E4%BF%A1%E6%81%AF"><span class="toc-number">3.</span> <span class="toc-text">获取请求体信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#POST%E6%96%B9%E5%BC%8F%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98"><span class="toc-number">3.1.</span> <span class="toc-text">POST方式乱码问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AC%E5%8F%91"><span class="toc-number">4.</span> <span class="toc-text">转发</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE"><span class="toc-number">5.</span> <span class="toc-text">共享数据</span></a></li></ol>
     </div>
   </section>
 
@@ -750,7 +756,7 @@ cookie存储数据在客户端浏览器
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+        <p><a href="/">Copyright © 2017-2020 ThreeCloth</a></p>
 
         </div>
       

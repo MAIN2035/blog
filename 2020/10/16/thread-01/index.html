@@ -19,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>线程方法 - 加菲先生の博客</title>
+  <title>线程方法 - ThreeClothの博客</title>
   
     <meta name="keywords" content="Java多线程编程">
   
@@ -81,8 +81,6 @@
       
         
         <a class="title flat-box" target="_self" href='/'>
-          
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
           
           
           
@@ -567,6 +565,14 @@
     <div class='footer'>
       
       
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2020\10\16\thread-03\" title="Lock对象" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">Lock对象</span></a><a class="item" href="\2020\10\16\thread-04\" title="线程加载与线程组" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">线程加载与线程组</span></a><a class="item" href="\2020\10\16\thread-05\" title="Thread与Runable" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">Thread与Runable</span></a><a class="item" href="\2020\10\16\thread-02\" title="线程安全与通信" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">线程安全与通信</span></a><a class="item" href="\2020\10\16\Java-01\" title="接口" rel="bookmark "><img src="http://img.lbkzw.cn/img/20200821084956.jpeg" class="lazyload" data-srcset="http://img.lbkzw.cn/img/20200821084956.jpeg" srcset="data:image/png;base64,666" /><span class="title">接口</span></a></div></section></div>
+      
       
         <div class='copyright'>
           <blockquote>
@@ -619,7 +625,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/thread-01/&title=线程方法 - 加菲先生の博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/thread-01/&title=线程方法 - ThreeClothの博客&summary="
           
           >
           
@@ -631,7 +637,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/thread-01/&title=线程方法 - 加菲先生の博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/thread-01/&title=线程方法 - ThreeClothの博客&summary="
           
           >
           
@@ -643,7 +649,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/thread-01/&title=线程方法 - 加菲先生の博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/thread-01/&title=线程方法 - ThreeClothの博客&summary="
           
           >
           
@@ -748,7 +754,7 @@ select prod_name from...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#StackTraceElement-getStackTrace"><span class="toc-text">StackTraceElement[] getStackTrace( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dumpStack"><span class="toc-text">dumpStack( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#staric-Map-lt-Thread-StackTraceElement-gt-getAllStackTraces"><span class="toc-text">staric Map&lt;Thread,StackTraceElement[]&gt; getAllStackTraces( )</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F"><span class="toc-number">1.</span> <span class="toc-text">线程安全共享变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#run-%E4%B8%8Estart"><span class="toc-number">2.</span> <span class="toc-text">run( )与start( )</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#currentThread"><span class="toc-number">3.</span> <span class="toc-text">currentThread()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#isAlive"><span class="toc-number">4.</span> <span class="toc-text">isAlive( )</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sleep%EF%BC%88%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">sleep（）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%A0%86%E6%A0%88%E6%96%B9%E6%B3%95"><span class="toc-number">6.</span> <span class="toc-text">线程堆栈方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#StackTraceElement-getStackTrace"><span class="toc-number">6.1.</span> <span class="toc-text">StackTraceElement[] getStackTrace( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dumpStack"><span class="toc-number">6.2.</span> <span class="toc-text">dumpStack( )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#staric-Map-lt-Thread-StackTraceElement-gt-getAllStackTraces"><span class="toc-number">6.3.</span> <span class="toc-text">staric Map&lt;Thread,StackTraceElement[]&gt; getAllStackTraces( )</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#getId"><span class="toc-number">7.</span> <span class="toc-text">getId( )</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#interrupted-%E3%80%81isinterrupted"><span class="toc-number">8.</span> <span class="toc-text">interrupted( )、isinterrupted( )</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#interrupt-%E3%80%81%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86"><span class="toc-number">9.</span> <span class="toc-text">interrupt( )、中断处理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E5%AE%83%E4%B8%AD%E6%96%AD%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%88%E5%B7%B2%E5%BA%9F%E5%BC%83%EF%BC%89"><span class="toc-number">10.</span> <span class="toc-text">其它中断线程的方法（已废弃）</span></a></li></ol>
     </div>
   </section>
 
@@ -826,7 +832,7 @@ select prod_name from...</p>
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+        <p><a href="/">Copyright © 2017-2020 ThreeCloth</a></p>
 
         </div>
       

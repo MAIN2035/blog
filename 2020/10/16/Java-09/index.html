@@ -19,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>IO流 - 加菲先生の博客</title>
+  <title>IO流 - ThreeClothの博客</title>
   
     <meta name="keywords" content="Java基础">
   
@@ -81,8 +81,6 @@
       
         
         <a class="title flat-box" target="_self" href='/'>
-          
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
           
           
           
@@ -553,6 +551,14 @@
     <div class='footer'>
       
       
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2020\10\16\Java-01\" title="接口" rel="bookmark "><img src="http://img.lbkzw.cn/img/20200821084956.jpeg" class="lazyload" data-srcset="http://img.lbkzw.cn/img/20200821084956.jpeg" srcset="data:image/png;base64,666" /><span class="title">接口</span></a><a class="item" href="\2020\10\16\Java-03\" title="函数式编程" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">函数式编程</span></a><a class="item" href="\2020\10\16\Java-04\" title="流的创建与基础操作" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">流的创建与基础操作</span></a><a class="item" href="\2020\10\16\Java-06\" title="终端操作(收集)" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">终端操作(收集)</span></a><a class="item" href="\2020\10\16\Java-05\" title="Optional类" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">Optional类</span></a></div></section></div>
+      
       
         <div class='copyright'>
           <blockquote>
@@ -605,7 +611,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/Java-09/&title=IO流 - 加菲先生の博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/Java-09/&title=IO流 - ThreeClothの博客&summary="
           
           >
           
@@ -617,7 +623,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/Java-09/&title=IO流 - 加菲先生の博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/Java-09/&title=IO流 - ThreeClothの博客&summary="
           
           >
           
@@ -629,7 +635,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/Java-09/&title=IO流 - 加菲先生の博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/Java-09/&title=IO流 - ThreeClothの博客&summary="
           
           >
           
@@ -714,7 +720,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%9A%84%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-text">流的分类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%9A%84%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-text">流的体系结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E4%BD%93%E7%BB%93%E6%9E%84%E4%BD%93%E7%B3%BB"><span class="toc-text">整体结构体系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E6%B5%81"><span class="toc-text">主要流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81%EF%BC%9AFileReader%E4%B8%8EFileWriter"><span class="toc-text">字符流：FileReader与FileWriter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81%EF%BC%9AFileInputStream%E4%B8%8EFileOutputStream"><span class="toc-text">字节流：FileInputStream与FileOutputStream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%93%E5%86%B2%E6%B5%81"><span class="toc-text">缓冲流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81"><span class="toc-text">字符流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81"><span class="toc-text">字节流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E6%B5%81"><span class="toc-text">转换流</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%9A%84%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">流的分类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%9A%84%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">流的体系结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E4%BD%93%E7%BB%93%E6%9E%84%E4%BD%93%E7%B3%BB"><span class="toc-number">2.1.</span> <span class="toc-text">整体结构体系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E6%B5%81"><span class="toc-number">2.2.</span> <span class="toc-text">主要流</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E6%B5%81"><span class="toc-number"></span> <span class="toc-text">节点流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81%EF%BC%9AFileReader%E4%B8%8EFileWriter"><span class="toc-number">1.</span> <span class="toc-text">字符流：FileReader与FileWriter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81%EF%BC%9AFileInputStream%E4%B8%8EFileOutputStream"><span class="toc-number">2.</span> <span class="toc-text">字节流：FileInputStream与FileOutputStream</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%B5%81"><span class="toc-number"></span> <span class="toc-text">处理流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%93%E5%86%B2%E6%B5%81"><span class="toc-number">1.</span> <span class="toc-text">缓冲流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81"><span class="toc-number">1.1.</span> <span class="toc-text">字符流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81"><span class="toc-number">1.2.</span> <span class="toc-text">字节流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E6%B5%81"><span class="toc-number">2.</span> <span class="toc-text">转换流</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E6%B5%81"><span class="toc-number"></span> <span class="toc-text">对象流</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E8%AE%BF%E9%97%AE%E6%B5%81"><span class="toc-number"></span> <span class="toc-text">随机访问流</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86"><span class="toc-number"></span> <span class="toc-text">字节流实现图片加密解密</span></a>
     </div>
   </section>
 
@@ -792,7 +798,7 @@
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+        <p><a href="/">Copyright © 2017-2020 ThreeCloth</a></p>
 
         </div>
       

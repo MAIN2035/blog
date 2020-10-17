@@ -19,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>JS对象 - 加菲先生の博客</title>
+  <title>JS对象 - ThreeClothの博客</title>
   
     <meta name="keywords" content="JS基础">
   
@@ -81,8 +81,6 @@
       
         
         <a class="title flat-box" target="_self" href='/'>
-          
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
           
           
           
@@ -535,6 +533,14 @@
     <div class='footer'>
       
       
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2020\10\16\JS-01\" title="JS作用域" rel="bookmark "><img src="http://img.lbkzw.cn/img/20200830120120.png" class="lazyload" data-srcset="http://img.lbkzw.cn/img/20200830120120.png" srcset="data:image/png;base64,666" /><span class="title">JS作用域</span></a><a class="item" href="\2020\10\16\js-02\" title="变量&&语法" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">变量&&语法</span></a><a class="item" href="\2020\10\16\js-03\" title="JS函数" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">JS函数</span></a><a class="item" href="\2020\10\16\js-05\" title="JS数组" rel="bookmark "><img src="data:image/png;base64,666" /><span class="title">JS数组</span></a></div></section></div>
+      
       
         <div class='copyright'>
           <blockquote>
@@ -587,7 +593,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/js-04/&title=JS对象 - 加菲先生の博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/10/16/js-04/&title=JS对象 - ThreeClothの博客&summary="
           
           >
           
@@ -599,7 +605,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/js-04/&title=JS对象 - 加菲先生の博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/10/16/js-04/&title=JS对象 - ThreeClothの博客&summary="
           
           >
           
@@ -611,7 +617,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/js-04/&title=JS对象 - 加菲先生の博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/10/16/js-04/&title=JS对象 - ThreeClothの博客&summary="
           
           >
           
@@ -696,7 +702,7 @@ Js数组是动态的，无需声明其大小，数组长度会根据需要增长
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%B1%9E%E6%80%A7%E7%89%B9%E6%80%A7"><span class="toc-text">设置属性特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-getOwnPropertyDescriptor"><span class="toc-text">Object.getOwnPropertyDescriptor()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-defineProperty"><span class="toc-text">Object.defineProperty()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-defineProperties"><span class="toc-text">Object.defineProperties()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object-create"><span class="toc-text">Object.create()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object-getPrototypeOf"><span class="toc-text">Object.getPrototypeOf()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%85%E8%A3%85%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.</span> <span class="toc-text">包装对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9B%B4%E6%8E%A5%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">对象直接量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="toc-number">3.</span> <span class="toc-text">new创建对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E3%80%81%E6%9F%A5%E8%AF%A2%E3%80%81%E6%B7%BB%E5%8A%A0%E3%80%81%E7%BB%A7%E6%89%BF"><span class="toc-number">4.</span> <span class="toc-text">删除、查询、添加、继承</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%98%E5%8F%96%E5%99%A8%E5%B1%9E%E6%80%A7"><span class="toc-number">5.</span> <span class="toc-text">存取器属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%B1%9E%E6%80%A7%E7%89%B9%E6%80%A7"><span class="toc-number">5.1.</span> <span class="toc-text">设置属性特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-getOwnPropertyDescriptor"><span class="toc-number">5.1.1.</span> <span class="toc-text">Object.getOwnPropertyDescriptor()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-defineProperty"><span class="toc-number">5.1.2.</span> <span class="toc-text">Object.defineProperty()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-defineProperties"><span class="toc-number">5.1.3.</span> <span class="toc-text">Object.defineProperties()</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B"><span class="toc-number">6.</span> <span class="toc-text">原型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object-create"><span class="toc-number">6.1.</span> <span class="toc-text">Object.create()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object-getPrototypeOf"><span class="toc-number">6.2.</span> <span class="toc-text">Object.getPrototypeOf()</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%AF%E6%89%A9%E5%B1%95"><span class="toc-number">7.</span> <span class="toc-text">可扩展</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E5%8C%96"><span class="toc-number">8.</span> <span class="toc-text">序列化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">8.1.</span> <span class="toc-text"></span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -774,7 +780,7 @@ Js数组是动态的，无需声明其大小，数组长度会根据需要增长
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+        <p><a href="/">Copyright © 2017-2020 ThreeCloth</a></p>
 
         </div>
       
