@@ -373,6 +373,162 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/10/16/mysql-00/">
+        mysql for cmd
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        初始化数据库：mysqld --initialize --console
+安装数据库：mysqld install
+启动mysql服务：net start mysql
+终止mysql服务：net stop mysql
+创建数据库到创建表：
+
+创建了一个名为db4的数据库，并选择数据库db4，在其中创建一个装有数据名为user的表。
+MySQL提示使用ALTERUSER语句修改密码安装mysq...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-10-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/mysql/">mysql</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/10/16/mysql-00/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/10/16/jvm-03/">
+        Class文件结构
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        class文件是以8个字节为基础的二进制流；
+class文件中存在表、无符号数这两种数据结构，同时每个class文件均可视为一张表；
+无符号数以u1、u2、u3、u4分别指代1、2、4、8字节，而所有表均以_info结尾
+魔数class文件开头的4个字节CA FE BA BE被称为魔数，用以区分该文件是否为class文件
+版本号第5、6个字节是次版本号，第7、8个字节是主版本号；
+虚拟机无法...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-10-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Java/">Java</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/10/16/jvm-03/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/10/16/jvm-02/">
+        追踪式垃圾回收算法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        四种引用：
+强引用：指程序中普遍存在的引用赋值；被强引用关联的对象只要强引用关系存在，被引用的对象就不会被回收
+软引用：指有用而非必须的对象；被软引用关联的对象在系统发生内存溢出之前会将其回收
+弱引用：指非必须的对象（比软引用弱）；被弱引用关联的对象在下一次垃圾回收前无论内存是否足够，均将其回收
+虚引用：无法通过此引用来取得对象实例，使用此引用只是为了在对象被回收时收到一个系统通知
+
+分代收...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-10-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Java/">Java</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/10/16/jvm-02/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/10/16/jvm-01/">
         运行时数据区域
       </a>
@@ -721,146 +877,6 @@ RHS查找的目的是为了引用值
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/16/Java-Stack-01/">
-        栈、队列
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        1234567891011121314151617graph LRA[扫描输入] --&gt;B&#123;是否为运算符&#125;    B --&gt; |是运算符| C&#123;运算符栈是否为空&#125;    B --&gt;|是数值| D&#123;判断是否为多位数&#125;    D --&gt;|是多位| J[扫描到运算符为止]    J --&gt; K    D --...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/16/Java-Stack-01/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/16/javadm-04/">
-        2020年10月16日
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        单元测试单元测试时，程序运行的成功与否并不依靠返回值、打印语句来判断;通常我们使用断言而非print来展示返回值
-12Assert.assertEquals(-1,value)//预测变量value的值为-1assert i &lt; 50:i;//断言i的值小于50（如i大于等于50将发生异常并返回实际i的值）
-
-idea中运行结果为绿色就是运行成功，红色则失败。
-@Before在测试方法...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-16</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/16/javadm-04/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/16/Javadm-03/">
-        代理模式
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        只要代理对象以某种方式代表具体实现的方法调用，那么基本思想就算实现了。而，拥有一个公共接口是很方便的，因此具体实现必须实现代理对象调用的所有方法。
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859// patterns/Pr...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/16/Javadm-03/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -992,7 +1008,7 @@ idea中运行结果为绿色就是运行成功，红色则失败。
           <li><a class="flat-box"
             title="/categories/JavaWeb/" href="/categories/JavaWeb/"
             id="categoriesJavaWeb"
-            ><div class='name'>JavaWeb</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>JavaWeb</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/SQL/" href="/categories/SQL/"
@@ -1017,7 +1033,7 @@ idea中运行结果为绿色就是运行成功，红色则失败。
           <li><a class="flat-box"
             title="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
             id="categoriesE695B0E68DAEE7BB93E69E84"
-            ><div class='name'>数据结构</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>数据结构</div><div class='badge'>(2)</div></a></li>
         
       </ul>
     </div>
@@ -1041,7 +1057,7 @@ idea中运行结果为绿色就是运行成功，红色则失败。
 
 
     <div class='content'>
-      <a href="/tags/Cookie/" style="font-size: 14px; color: #999">Cookie</a> <a href="/tags/EffectiveJava/" style="font-size: 14px; color: #999">EffectiveJava</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS%E5%9F%BA%E7%A1%80/" style="font-size: 21.5px; color: #666">JS基础</a> <a href="/tags/JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 14px; color: #999">JVM虚拟机</a> <a href="/tags/Java/" style="font-size: 19px; color: #777">Java</a> <a href="/tags/JavaWeb/" style="font-size: 14px; color: #999">JavaWeb</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 24px; color: #555">Java基础</a> <a href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/" style="font-size: 21.5px; color: #666">Java多线程编程</a> <a href="/tags/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 19px; color: #777">Java设计模式</a> <a href="/tags/Jvm%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 16.5px; color: #888">Jvm虚拟机</a> <a href="/tags/SQL%E5%85%A5%E9%97%A8/" style="font-size: 14px; color: #999">SQL入门</a> <a href="/tags/Session/" style="font-size: 14px; color: #999">Session</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/mysql/" style="font-size: 14px; color: #999">mysql</a> <a href="/tags/shell/" style="font-size: 14px; color: #999">shell</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 14px; color: #999">数据结构</a>
+      <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/Cookie/" style="font-size: 14px; color: #999">Cookie</a> <a href="/tags/EffectiveJava/" style="font-size: 14px; color: #999">EffectiveJava</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS%E5%9F%BA%E7%A1%80/" style="font-size: 21.5px; color: #666">JS基础</a> <a href="/tags/JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 14px; color: #999">JVM虚拟机</a> <a href="/tags/Java/" style="font-size: 21.5px; color: #666">Java</a> <a href="/tags/JavaWeb/" style="font-size: 14px; color: #999">JavaWeb</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 24px; color: #555">Java基础</a> <a href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/" style="font-size: 21.5px; color: #666">Java多线程编程</a> <a href="/tags/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 19px; color: #777">Java设计模式</a> <a href="/tags/Jsp/" style="font-size: 14px; color: #999">Jsp</a> <a href="/tags/Jvm%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 16.5px; color: #888">Jvm虚拟机</a> <a href="/tags/SQL%E5%85%A5%E9%97%A8/" style="font-size: 14px; color: #999">SQL入门</a> <a href="/tags/Session/" style="font-size: 14px; color: #999">Session</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/mysql/" style="font-size: 14px; color: #999">mysql</a> <a href="/tags/shell/" style="font-size: 14px; color: #999">shell</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16.5px; color: #888">数据结构</a>
     </div>
   </section>
 
