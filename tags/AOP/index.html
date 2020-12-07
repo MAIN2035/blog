@@ -21,7 +21,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>标签：数据结构 - ThreeClothの博客</title>
+  <title>标签：AOP - ThreeClothの博客</title>
   
 
   
@@ -368,8 +368,6 @@
         
           
         
-          
-        
       
     
     
@@ -383,22 +381,19 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/10/27/Java-datas-heap/">
-        堆、堆排序
+      <a href="/2020/11/30/Java-Aop/">
+        简单使用动态代理
       </a>
     </h2>
   
   <div class='md'>
     
       
-        堆：以完全二叉树的形式展现：
-除了树的最后一层结点不需要是满的，其它的每一层从左到右都是满的，如果最后一层结点不 是满的，那么要求左满右不满
+        简单使用动态代理
+使用Aop在不改变原有结构下对类的功能进行增强
 
-并以数组进行存储。每个结点都大于等于它的两个子结点。
-如下图，如用k表示当前结点，则其的左右结点分别为2k，2k+1，任意结点的父节点为k/2
-k/2(包括k/2)前是非叶子结点k/2之后是叶子结点。
-
-堆实现12345678910111213141...
+1.目标类接口
+12345678910package cn.itthree.aop.service;/** * 目标接口* */public interface UsbSell &#123;    /*amount表示单次购买数量     * 返回值是一个u盘的价格*/    float sell(int amount);&...
       
     
   </div>
@@ -406,61 +401,15 @@ k/2(包括k/2)前是非叶子结点k/2之后是叶子结点。
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2020-10-27</time>
+        <time>2020-11-30</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+          <a class="category-link" href="/categories/Java/">Java</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2020/10/27/Java-datas-heap/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/16/Java-Stack-01/">
-        栈、队列
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        1234567891011121314151617graph LRA[扫描输入] --&gt;B&#123;是否为运算符&#125;    B --&gt; |是运算符| C&#123;运算符栈是否为空&#125;    B --&gt;|是数值| D&#123;判断是否为多位数&#125;    D --&gt;|是多位| J[扫描到运算符为止]    J --&gt; K    D --...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/16/Java-Stack-01/'>
+          <a class='readmore' href='/2020/11/30/Java-Aop/'>
             阅读全文
           </a>
         </div>
