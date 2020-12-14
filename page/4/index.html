@@ -374,6 +374,108 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/10/16/js-02/">
+        变量&&语法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        函数体内局部变量优先级高于全局变量；
+函数内的变量声明将提升至函数体顶部，同时在原位置完成初始化var声明；
+在for循环中使用var声明变量时，该变量的作用域为for循环所属函数。
+123456789 var a=[];   for(var i = 0;i&lt;10;i++)&#123;       var q = i;      a[i]=function()&#123;console...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-10-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/JS/">JS</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/10/16/js-02/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/10/16/JS-01/">
+        JS作用域
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        编译JavaScript是编译型语言，不同的是JavaScript的代码编译发生在代码执行前的几微秒内
+LHS与RHSLHS查找的目的为了赋值
+RHS查找的目的是为了引用值
+作用域作用域查找从词法作用域（即最内部作用域）开始逐层向上查找，直到匹配到或触顶为止
+
+
+全局变量会自动成为全局对象，因此可通过 window.a（a是要访问的变量）访问被同名变量屏蔽的全局变量
+欺骗词法使用欺骗词法则J...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-10-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/JS/">JS</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/10/16/JS-01/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/10/16/JDBC-01/">
         JDBC基本使用
       </a>
@@ -751,119 +853,6 @@ idea中运行结果为绿色就是运行成功，红色则失败。
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/16/Java-09/">
-        IO流
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        流的分类：操作数据单位：字节流、字符流数据的流向：输入流、输出流流的角色：节点流、处理流
-流的体系结构整体结构体系
-
-
-主要流
-
-
-抽象基类
-节点流（或文件流）
-缓冲流（处理流的一种）
-
-
-
-InputStream
-FileInputStream   (read(byte[] buffer))
-BufferedInputStream (read(byte[] buffer))
-
-
-Outpu...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/16/Java-09/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/16/Java-08/">
-        Java泛型
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        泛型是编译时泛型，用于检查类型安全以及类型推断，虚拟机运行时已经被擦除；
-泛型的类型参数T在编译后为Object类型；
-泛型方法能使方法独立于类而产生变化。
-泛型类12345678910111213141516/**泛型类*///此处T可以随便写为任意标识，常见的如T、E、K、V等形式的参数常用于表示泛型//在实例化泛型类时，必须指定T的具体类型public class Generic&lt...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/16/Java-08/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -878,8 +867,14 @@ Outpu...
           </a>
         
         <p class="current">
-          4 / 4
+          4 / 5
         </p>
+        
+          <a class="next" rel="next" href="/page/5/">
+            <section class="post next white-box shadow">
+              &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </section>
+          </a>
         
       </div>
     
@@ -1015,6 +1010,11 @@ Outpu...
             id="categoriesE695B0E68DAEE7BB93E69E84"
             ><div class='name'>数据结构</div><div class='badge'>(2)</div></a></li>
         
+          <li><a class="flat-box"
+            title="/categories/%E6%B2%99%E9%9B%95%E6%97%A5%E8%AE%B0/" href="/categories/%E6%B2%99%E9%9B%95%E6%97%A5%E8%AE%B0/"
+            id="categoriesE6B299E99B95E697A5E8AEB0"
+            ><div class='name'>沙雕日记</div><div class='badge'>(1)</div></a></li>
+        
       </ul>
     </div>
   </section>
@@ -1037,7 +1037,7 @@ Outpu...
 
 
     <div class='content'>
-      <a href="/tags/AOP/" style="font-size: 14px; color: #999">AOP</a> <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/Cookie/" style="font-size: 14px; color: #999">Cookie</a> <a href="/tags/EffectiveJava/" style="font-size: 14px; color: #999">EffectiveJava</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS%E5%9F%BA%E7%A1%80/" style="font-size: 21.5px; color: #666">JS基础</a> <a href="/tags/JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 14px; color: #999">JVM虚拟机</a> <a href="/tags/Java/" style="font-size: 21.5px; color: #666">Java</a> <a href="/tags/JavaWeb/" style="font-size: 14px; color: #999">JavaWeb</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 24px; color: #555">Java基础</a> <a href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/" style="font-size: 21.5px; color: #666">Java多线程编程</a> <a href="/tags/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 19px; color: #777">Java设计模式</a> <a href="/tags/Jsp/" style="font-size: 14px; color: #999">Jsp</a> <a href="/tags/Jvm%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 16.5px; color: #888">Jvm虚拟机</a> <a href="/tags/SQL%E5%85%A5%E9%97%A8/" style="font-size: 14px; color: #999">SQL入门</a> <a href="/tags/Session/" style="font-size: 14px; color: #999">Session</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/mysql/" style="font-size: 14px; color: #999">mysql</a> <a href="/tags/shell/" style="font-size: 14px; color: #999">shell</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16.5px; color: #888">数据结构</a>
+      <a href="/tags/AOP/" style="font-size: 14px; color: #999">AOP</a> <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/Cookie/" style="font-size: 14px; color: #999">Cookie</a> <a href="/tags/EffectiveJava/" style="font-size: 14px; color: #999">EffectiveJava</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS%E5%9F%BA%E7%A1%80/" style="font-size: 21.5px; color: #666">JS基础</a> <a href="/tags/JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 14px; color: #999">JVM虚拟机</a> <a href="/tags/Java/" style="font-size: 21.5px; color: #666">Java</a> <a href="/tags/JavaWeb/" style="font-size: 14px; color: #999">JavaWeb</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 24px; color: #555">Java基础</a> <a href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/" style="font-size: 21.5px; color: #666">Java多线程编程</a> <a href="/tags/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 19px; color: #777">Java设计模式</a> <a href="/tags/Jsp/" style="font-size: 14px; color: #999">Jsp</a> <a href="/tags/Jvm%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 16.5px; color: #888">Jvm虚拟机</a> <a href="/tags/SQL%E5%85%A5%E9%97%A8/" style="font-size: 14px; color: #999">SQL入门</a> <a href="/tags/Session/" style="font-size: 14px; color: #999">Session</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/mysql/" style="font-size: 14px; color: #999">mysql</a> <a href="/tags/shell/" style="font-size: 14px; color: #999">shell</a> <a href="/tags/sql/" style="font-size: 14px; color: #999">sql</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16.5px; color: #888">数据结构</a>
     </div>
   </section>
 
