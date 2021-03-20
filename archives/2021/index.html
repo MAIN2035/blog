@@ -5,6 +5,8 @@
   <!-- SEO相关 -->
   
     
+      <meta name="robots" content="noindex,follow">
+    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -19,9 +21,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>期末作业-数据库mysql - ThreeClothの博客</title>
-  
-    <meta name="keywords" content="sql">
+  <title>归档：2021 - ThreeClothの博客</title>
   
 
   
@@ -65,7 +65,7 @@
 <body>
   
 
-<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -282,7 +282,7 @@
     <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper post dock' style="display: none;">
+        <div id="half" class='cover-wrapper  dock' style="display: ;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"></div>
           
@@ -344,300 +344,173 @@
         
 
 <div class='l_main'>
-  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  
-
-
-  
-  <div class="article-meta" id="top">
+	
+		
+  <section class="post-list">
     
-    
-    
-      <h1 class="title">
-        期末作业-数据库mysql
-      </h1>
-      <div class='new-meta-box'>
-        
-          
-            
-<div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="">
-    <p>Three Cloth</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%B2%99%E9%9B%95%E6%97%A5%E8%AE%B0/">沙雕日记</a>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年12月14日</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  <div class="new-meta-item browse leancloud">
-    <a class='notlink'>
       
-      <div id="lc-pv" data-title="期末作业-数据库mysql" data-path="/2020/12/14/2020-dataB-End/">
-        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
-        次浏览
-      </div>
-    </a>
-  </div>
-
-
+        
           
+        
+          
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/20/Python-1/">
+        2021年3月20日
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Python机器学习刚刚接触机器学习，接触Python已久。
+anaconda
+安装不做介绍，下载链接https://anaconda.en.softonic.com/
+
+
+环境命令：
+
+创建一个名称为python37的虚拟环境并指定python版本为3.7 ：
+1conda  create -n python37 python=3.7
+
+查看环境：conda info --envs
+激活某...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-20</time>
         
       </div>
-    
-  </div>
-
-
-  
-  <h1 id="原题如下"><a href="#原题如下" class="headerlink" title="原题如下"></a>原题如下</h1><p>设有一个工程供应数据库系统，包括如下四个关系模式： </p>
-<p>S(SNO，SNAME， STATUS，CITY)；（SNO的域为1001-1999） </p>
-<p>P(PNO，PNAME，COLOR，WEIGHT)； （PNO的域为2001-2999）</p>
-<p>J(JNO，JNAME，CITY)；（JNO的域为3001-3999） </p>
-<p>SPJ(SNO，PNO，JNO，QTY)； </p>
-<p>供应商表S由供应商号、供应商名、状态、城市组成； </p>
-<p>零件表P 由零件号、零件名、颜色、重量组成； </p>
-<p>工程项目表J由项目号、项目名、城市组成； </p>
-<p>供应情况表SPJ由供应商号、零件号、项目号、供应数量组成； </p>
-<p>1、创建数据库SPJ；</p>
-<p>2、使用数据库SPJ；</p>
-<p>3、创建4个具体表，分别为供应商表S、零件表P、工程项目表J、供应情况表SPJ；</p>
-<p>4、每个表分别插入2-3条数据（供应商名为自己姓名）；</p>
-<p>5、用SQL查询供应工程J3001零件为红色的工程号JNO；</p>
-<p>6、用SQL查询没有使用天津供应商生产的零件的工程号；</p>
-<p>7、用SQL语句将全部红色零件改为蓝色； </p>
-<p>8、用SQL语句将（S1001，P2001，J3001，400）插入供应情况关系；</p>
-<p>9、用SQL语句删除供应商表S中SNO为1001的供应商；</p>
-<h1 id="答题操作"><a href="#答题操作" class="headerlink" title="答题操作"></a>答题操作</h1><p>沙雕第一步建库再删库</p>
-<h2 id="1、创建数据库SPJ"><a href="#1、创建数据库SPJ" class="headerlink" title="1、创建数据库SPJ"></a>1、创建数据库SPJ</h2><p><code>CREATE DATABASE SPJ;</code></p>
-<h2 id="2-使用数据库SPJ"><a href="#2-使用数据库SPJ" class="headerlink" title="2.使用数据库SPJ"></a>2.使用数据库SPJ</h2><p><code>USE spj;</code></p>
-<h2 id="3、创建4个具体表"><a href="#3、创建4个具体表" class="headerlink" title="3、创建4个具体表"></a>3、创建4个具体表</h2><p>分别为供应商表S、零件表P、工程项目表J、供应情况表SPJ</p>
-<p><strong>创建供应商表S</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`S`</span>(</span><br><span class="line"><span class="string">`SNO`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT, <span class="comment">-- 不为null 自增长 </span></span><br><span class="line"><span class="string">`SNAME`</span> <span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line"><span class="string">`STATUS`</span><span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line"><span class="string">`CITY`</span> <span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">PRIMARY <span class="keyword">KEY</span> ( <span class="string">`SNO`</span> ),   <span class="comment">-- 设置SNO为主键</span></span><br><span class="line"><span class="keyword">CHECK</span>(<span class="string">`SNO`</span>&gt;=<span class="number">1001</span> <span class="keyword">AND</span> <span class="string">`SNO`</span>&lt;<span class="number">1999</span>) <span class="comment">-- 设置列范围</span></span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">INNODB</span> AUTO_INCREMENT=<span class="number">1001</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;  <span class="comment">-- 设置数据库引擎为INNODB 主键自增长从1001开始 默认编码为utf8</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>创建零件表P</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`P`</span>(</span><br><span class="line"><span class="string">`PNO`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line"><span class="string">`PNAME`</span> <span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line"><span class="string">`COLOR`</span><span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line"><span class="string">`WEIGHT`</span> <span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">PRIMARY <span class="keyword">KEY</span> ( <span class="string">`PNO`</span> ),</span><br><span class="line"><span class="keyword">CHECK</span>(<span class="string">`PNO`</span>&gt;=<span class="number">2001</span> <span class="keyword">AND</span> <span class="string">`PNO`</span>&lt;<span class="number">2999</span>)</span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">INNODB</span> AUTO_INCREMENT=<span class="number">2001</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>创建工程项目表J</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`J`</span>(</span><br><span class="line"><span class="string">`JNO`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line"><span class="string">`JNAME`</span> <span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line"><span class="string">`CITY`</span><span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">PRIMARY <span class="keyword">KEY</span> ( <span class="string">`JNO`</span> ),</span><br><span class="line"><span class="keyword">CHECK</span>(<span class="string">`JNO`</span>&gt;=<span class="number">3001</span> <span class="keyword">AND</span> <span class="string">`JNO`</span>&lt;<span class="number">3999</span>)</span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">INNODB</span> AUTO_INCREMENT=<span class="number">2001</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>供应情况表SPJ</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`SPJ`</span>(</span><br><span class="line"><span class="string">`SNO`</span> <span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line"><span class="string">`PNO`</span> <span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line"><span class="string">`JNO`</span> <span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line"><span class="string">`QTY`</span> <span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span></span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">INNODB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br></pre></td></tr></table></figure>
-
-<h2 id="4、每个表分别插入2-3条数据（供应商名为自己姓名）"><a href="#4、每个表分别插入2-3条数据（供应商名为自己姓名）" class="headerlink" title="4、每个表分别插入2-3条数据（供应商名为自己姓名）"></a>4、每个表分别插入2-3条数据（供应商名为自己姓名）</h2><p><strong>供应商表S插入数据</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="string">`s`</span></span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;1001&#x27;</span>,<span class="string">&#x27;赵玉豪&#x27;</span>,<span class="string">&#x27;火爆&#x27;</span>,<span class="string">&#x27;深圳&#x27;</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="string">`s`</span></span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;1002&#x27;</span>,<span class="string">&#x27;赵玉豪&#x27;</span>,<span class="string">&#x27;火爆&#x27;</span>,<span class="string">&#x27;深圳&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<p><strong>供零件表S插入数据</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="string">`p`</span></span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;2002&#x27;</span>,<span class="string">&#x27;把手&#x27;</span>,<span class="string">&#x27;白色&#x27;</span>,<span class="string">&#x27;5kg&#x27;</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="string">`p`</span></span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;2002&#x27;</span>,<span class="string">&#x27;把手&#x27;</span>,<span class="string">&#x27;白色&#x27;</span>,<span class="string">&#x27;5kg&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>工程项目表S插入数据</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="string">`j`</span></span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;3001&#x27;</span>,<span class="string">&#x27;wwz666&#x27;</span>,<span class="string">&#x27;深圳&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="string">`j`</span></span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;3002&#x27;</span>,<span class="string">&#x27;wwz666666&#x27;</span>,<span class="string">&#x27;深圳&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<p><strong>供应情况表SPJ插入数据</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="string">`spj`</span></span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;1001&#x27;</span>,<span class="string">&#x27;2001&#x27;</span>,<span class="string">&#x27;3001&#x27;</span>,<span class="string">&#x27;100&#x27;</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="string">`spj`</span></span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;1002&#x27;</span>,<span class="string">&#x27;2002&#x27;</span>,<span class="string">&#x27;3002&#x27;</span>,<span class="string">&#x27;200&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="5、用SQL查询供应工程J3001零件为红色的工程号JNO；"><a href="#5、用SQL查询供应工程J3001零件为红色的工程号JNO；" class="headerlink" title="5、用SQL查询供应工程J3001零件为红色的工程号JNO；"></a>5、用SQL查询供应工程J3001零件为红色的工程号JNO；</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> JNO,COLOR <span class="keyword">FROM</span> J,P</span><br><span class="line"><span class="keyword">WHERE</span> JNO=<span class="string">&#x27;J3001&#x27;</span> <span class="keyword">AND</span> COLOR=<span class="string">&#x27;红色&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="6、用SQL查询没有使用天津供应商生产的零件的工程号；"><a href="#6、用SQL查询没有使用天津供应商生产的零件的工程号；" class="headerlink" title="6、用SQL查询没有使用天津供应商生产的零件的工程号；"></a>6、用SQL查询没有使用天津供应商生产的零件的工程号；</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> JNO <span class="keyword">FROM</span> J</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">NOT</span> CITY <span class="keyword">IN</span>(<span class="string">&#x27;天津&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="7、用SQL语句将全部红色零件改为蓝色；"><a href="#7、用SQL语句将全部红色零件改为蓝色；" class="headerlink" title="7、用SQL语句将全部红色零件改为蓝色；"></a>7、用SQL语句将全部红色零件改为蓝色；</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> p</span><br><span class="line"><span class="keyword">SET</span> COLOR=<span class="string">&#x27;蓝色&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="8、用SQL语句将（S1001，P2001，J3001，400）插入供应情况关系"><a href="#8、用SQL语句将（S1001，P2001，J3001，400）插入供应情况关系" class="headerlink" title="8、用SQL语句将（S1001，P2001，J3001，400）插入供应情况关系"></a>8、用SQL语句将（S1001，P2001，J3001，400）插入供应情况关系</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="string">`spj`</span></span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;S1001&#x27;</span>,<span class="string">&#x27;P2001&#x27;</span>,<span class="string">&#x27;J3001&#x27;</span>,<span class="string">&#x27;400&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="9、用SQL语句删除供应商表S中SNO为1001的供应商"><a href="#9、用SQL语句删除供应商表S中SNO为1001的供应商" class="headerlink" title="9、用SQL语句删除供应商表S中SNO为1001的供应商"></a>9、用SQL语句删除供应商表S中SNO为1001的供应商</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> s</span><br><span class="line"><span class="keyword">WHERE</span> SNO=<span class="string">&#x27;1001&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<h1 id="最终效果如下："><a href="#最终效果如下：" class="headerlink" title="最终效果如下："></a>最终效果如下：</h1><p>暂未上传<br><img src="https://img.lbkzw.cn/img/image-20201214090605188.png" class="lazyload" data-srcset="https://img.lbkzw.cn/img/image-20201214090605188.png" srcset="data:image/png;base64,666"></p>
-
-  
-  
-    
-    <div class='footer'>
       
-      
-        
-      
-      
-        <div class='copyright'>
-          <blockquote>
-            
-              
-                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
-
-              
-            
-              
-                <p>本文永久链接是：<a href=https://main2035.github.io/2020/12/14/2020-dataB-End/>https://main2035.github.io/2020/12/14/2020-dataB-End/</a></p>
-              
-            
-          </blockquote>
+        <div>
+          <a class='readmore' href='/2021/03/20/Python-1/'>
+            阅读全文
+          </a>
         </div>
       
-      
     </div>
   
-  
-    
 
-
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
-      
-        
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-14T13:16:55+08:00">
-  <a class='notlink'>
-    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年12月14日</p>
-  </a>
 </div>
 
+          </div>
         
       
         
-          
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/sql/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>sql</p></a></div>
-
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/03/PriorityQueue/">
+        2021年3月3日
+      </a>
+    </h2>
+  
+  <div class='md'>
     
       
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://main2035.github.io/2020/12/14/2020-dataB-End/&title=期末作业-数据库mysql - ThreeClothの博客&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://main2035.github.io/2020/12/14/2020-dataB-End/&title=期末作业-数据库mysql - ThreeClothの博客&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://main2035.github.io/2020/12/14/2020-dataB-End/&title=期末作业-数据库mysql - ThreeClothの博客&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
-          
-        </a>
-      
-    
-      
-    
+        PriorityQueue插入元素
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748 //代理方法public boolean add(E e) &#123;        return offer(e);    &#125;//目标方法    public bool...
       
     
   </div>
-</div>
-
-
-
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
         
+        <time>2021-03-03</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/03/PriorityQueue/'>
+            阅读全文
+          </a>
+        </div>
       
     </div>
-  </div>
-
-
-  
   
 
-  
-    <div class="prev-next">
+</div>
+
+          </div>
+        
       
-        <a class='prev' href='/2021/02/13/20210213/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i></p>
-          <p class='content'>很久没有更新blog了。
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/02/13/20210213/">
+        2021年2月13日
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        很久没有更新blog了。
 多年以后你会想起么，也会同样哼着这首歌。
-</p>
-        </a>
+
       
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-02-13</time>
+        
+      </div>
       
-        <a class='next' href='/2020/12/10/java-mybatis-01/'>
-          <p class='title'><i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>#基础支持层
-解析器模块常见的三种解析方式： DOM SAX StAX
-DOM整体将XML整体解析为树状样式
-优点：便于获取数据，如在父子兄弟节点间切换很自然
-缺点：占用资源较大
-SAX基于事件...</p>
-        </a>
+        <div>
+          <a class='readmore' href='/2021/02/13/20210213/'>
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
-</article>
 
-
-  
-
-  <article class="post white-box reveal shadow" id="comments">
-    <p ct><i class='fas fa-comments'></i> 评论</p>
-    
-    <div id="valine_container" class="valine_thread">
-  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-  </article>
+          </div>
+        
+      
+    
+  </section>
+  
+    
+  
 
 
-
-
-
-
+	
 </div>
 <aside class='l_side'>
   
@@ -645,28 +518,166 @@ SAX基于事件...</p>
     
     
 
+<section class="widget blogger shadow desktop mobile">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+        
+        
+          <p><span id="jinrishici-sentence">ThreeClothの博客</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:me@xxx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/volantis-x/"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="/"
+              class="social fas fa-headphones-alt flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
 
+  
 
-  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+  
+    
+    
+  
+
+  <section class="widget category shadow desktop">
     
   <header>
     
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
     
   </header>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8E%9F%E9%A2%98%E5%A6%82%E4%B8%8B"><span class="toc-number">1.</span> <span class="toc-text">原题如下</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AD%94%E9%A2%98%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">答题操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93SPJ"><span class="toc-number">2.1.</span> <span class="toc-text">1、创建数据库SPJ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93SPJ"><span class="toc-number">2.2.</span> <span class="toc-text">2.使用数据库SPJ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%88%9B%E5%BB%BA4%E4%B8%AA%E5%85%B7%E4%BD%93%E8%A1%A8"><span class="toc-number">2.3.</span> <span class="toc-text">3、创建4个具体表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E6%AF%8F%E4%B8%AA%E8%A1%A8%E5%88%86%E5%88%AB%E6%8F%92%E5%85%A52-3%E6%9D%A1%E6%95%B0%E6%8D%AE%EF%BC%88%E4%BE%9B%E5%BA%94%E5%95%86%E5%90%8D%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%A7%93%E5%90%8D%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">4、每个表分别插入2-3条数据（供应商名为自己姓名）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E7%94%A8SQL%E6%9F%A5%E8%AF%A2%E4%BE%9B%E5%BA%94%E5%B7%A5%E7%A8%8BJ3001%E9%9B%B6%E4%BB%B6%E4%B8%BA%E7%BA%A2%E8%89%B2%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%8F%B7JNO%EF%BC%9B"><span class="toc-number">2.5.</span> <span class="toc-text">5、用SQL查询供应工程J3001零件为红色的工程号JNO；</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E7%94%A8SQL%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%BD%BF%E7%94%A8%E5%A4%A9%E6%B4%A5%E4%BE%9B%E5%BA%94%E5%95%86%E7%94%9F%E4%BA%A7%E7%9A%84%E9%9B%B6%E4%BB%B6%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%8F%B7%EF%BC%9B"><span class="toc-number">2.6.</span> <span class="toc-text">6、用SQL查询没有使用天津供应商生产的零件的工程号；</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81%E7%94%A8SQL%E8%AF%AD%E5%8F%A5%E5%B0%86%E5%85%A8%E9%83%A8%E7%BA%A2%E8%89%B2%E9%9B%B6%E4%BB%B6%E6%94%B9%E4%B8%BA%E8%93%9D%E8%89%B2%EF%BC%9B"><span class="toc-number">2.7.</span> <span class="toc-text">7、用SQL语句将全部红色零件改为蓝色；</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E7%94%A8SQL%E8%AF%AD%E5%8F%A5%E5%B0%86%EF%BC%88S1001%EF%BC%8CP2001%EF%BC%8CJ3001%EF%BC%8C400%EF%BC%89%E6%8F%92%E5%85%A5%E4%BE%9B%E5%BA%94%E6%83%85%E5%86%B5%E5%85%B3%E7%B3%BB"><span class="toc-number">2.8.</span> <span class="toc-text">8、用SQL语句将（S1001，P2001，J3001，400）插入供应情况关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E7%94%A8SQL%E8%AF%AD%E5%8F%A5%E5%88%A0%E9%99%A4%E4%BE%9B%E5%BA%94%E5%95%86%E8%A1%A8S%E4%B8%ADSNO%E4%B8%BA1001%E7%9A%84%E4%BE%9B%E5%BA%94%E5%95%86"><span class="toc-number">2.9.</span> <span class="toc-text">9、用SQL语句删除供应商表S中SNO为1001的供应商</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">最终效果如下：</span></a></li></ol>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/JS/" href="/categories/JS/"
+            id="categoriesJS"
+            ><div class='name'>JS</div><div class='badge'>(5)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/Java/" href="/categories/Java/"
+            id="categoriesJava"
+            ><div class='name'>Java</div><div class='badge'>(25)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/JavaWeb/" href="/categories/JavaWeb/"
+            id="categoriesJavaWeb"
+            ><div class='name'>JavaWeb</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/SQL/" href="/categories/SQL/"
+            id="categoriesSQL"
+            ><div class='name'>SQL</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/Ubuntu/" href="/categories/Ubuntu/"
+            id="categoriesUbuntu"
+            ><div class='name'>Ubuntu</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/hexo/" href="/categories/hexo/"
+            id="categorieshexo"
+            ><div class='name'>hexo</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/mysql/" href="/categories/mysql/"
+            id="categoriesmysql"
+            ><div class='name'>mysql</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+            id="categoriesE695B0E68DAEE7BB93E69E84"
+            ><div class='name'>数据结构</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%B2%99%E9%9B%95%E6%97%A5%E8%AE%B0/" href="/categories/%E6%B2%99%E9%9B%95%E6%97%A5%E8%AE%B0/"
+            id="categoriesE6B299E99B95E697A5E8AEB0"
+            ><div class='name'>沙雕日记</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
     </div>
   </section>
 
 
   
 
+  
+    
+    
+  
+
+  <section class="widget tagcloud shadow desktop mobile">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/AOP/" style="font-size: 14px; color: #999">AOP</a> <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/Cookie/" style="font-size: 14px; color: #999">Cookie</a> <a href="/tags/EffectiveJava/" style="font-size: 14px; color: #999">EffectiveJava</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS%E5%9F%BA%E7%A1%80/" style="font-size: 21.5px; color: #666">JS基础</a> <a href="/tags/JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 14px; color: #999">JVM虚拟机</a> <a href="/tags/Java/" style="font-size: 21.5px; color: #666">Java</a> <a href="/tags/JavaWeb/" style="font-size: 14px; color: #999">JavaWeb</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 24px; color: #555">Java基础</a> <a href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/" style="font-size: 21.5px; color: #666">Java多线程编程</a> <a href="/tags/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 19px; color: #777">Java设计模式</a> <a href="/tags/Jsp/" style="font-size: 14px; color: #999">Jsp</a> <a href="/tags/Jvm%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 16.5px; color: #888">Jvm虚拟机</a> <a href="/tags/SQL%E5%85%A5%E9%97%A8/" style="font-size: 14px; color: #999">SQL入门</a> <a href="/tags/Session/" style="font-size: 14px; color: #999">Session</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/mysql/" style="font-size: 14px; color: #999">mysql</a> <a href="/tags/shell/" style="font-size: 14px; color: #999">shell</a> <a href="/tags/sql/" style="font-size: 14px; color: #999">sql</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16.5px; color: #888">数据结构</a>
+    </div>
+  </section>
+
+
+  
+
+  
+
 
 </aside>
-
 
 
         
@@ -676,14 +687,14 @@ SAX基于事件...</p>
 
 <script>
   window.pdata={}
-  pdata.ispage=true;
-  pdata.postTitle="期末作业-数据库mysql";
+  pdata.ispage=false;
+  pdata.postTitle="";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.add("show");
+  l_header.classList.remove("show");
   
 </script>
 

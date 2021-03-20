@@ -360,6 +360,162 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/10/16/Java-06/">
+        终端操作(收集)
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+以下操作将会获取流的最终结果。至此我们无法再继续往后传递流。
+终端操作（Terminal Operations）总是我们在流管道中所做的最后一件事。
+
+数组
+toArray()：将流转换成适当类型的数组。
+toArray(generator)：在特殊情况下，生成自定义类型的数组。
+
+12345678910// streams/RandInts.javapackage streams;imp...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-10-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Java/">Java</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/10/16/Java-06/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/10/16/Java-05/">
+        Optional类
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+用于，查看的流中元素返回提示而不是发生异常。
+
+findFirst() 返回一个包含第一个元素的 Optional 对象，如果流为空则返回 Optional.empty;
+findAny() 返回包含任意元素的 Optional 对象，如果流为空则返回 Optional.empty;
+max() 和 min() 返回一个包含最大值或者最小值的 Optional 对象，如果流为空则返回 Op...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-10-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Java/">Java</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/10/16/Java-05/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/10/16/Java-04/">
+        流的创建与基础操作
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+流是一系列与特定存储机制无关的元素——实际上，流并没有“存储”之说;
+利用流，我们无需迭代集合中的元素，就可以提取和操作它们。这些管道通常被组合在一起，在流上形成一条操作管道;
+流的一个核心好处是，它使得程序更加短小并且更易理解。当 Lambda 表达式和方法引用（method references）和流一起使用的时候会让人感觉自成一体;
+
+流操作的类型有三种：创建流，修改流元素（中间操作...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-10-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Java/">Java</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/10/16/Java-04/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/10/16/Java-03/">
         函数式编程
       </a>
@@ -697,160 +853,6 @@ request对象是来获取请求消息，response对象是来设置响应消息
       
         <div>
           <a class='readmore' href='/2020/10/16/thread-05/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/16/thread-04/">
-        线程加载与线程组
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        饿汉模式(立即加载)
-使用类时已创建对象
-
-123456789101112131415161718192021222324package cn.day.b8;public class MyObject &#123;    private static MyObject myObject = new MyObject();//使用类时已创建对象    public static MyObjec...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/16/thread-04/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/16/thread-03/">
-        Lock对象
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        ReentrantLockTestjdk5加入的，synchronized增强版
-lock( ) unlock( )  condition.await( ) **condition.signal( )**等
-lock( )**获取锁，unlock**释放锁（同步代码处在lock、unlock之间）
-condition.await( )**效果同wait( )**,调用此方法前，该线程必须获得...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/16/thread-03/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/16/thread-02/">
-        线程安全与通信
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        线程优先级
-线程优先级具有可继承性
-
-cpu将资源让与优先级更高的线程（运行更快）
-
-随机性：并不是执行完高优先级线程再执行低优先级线程，只是说首先执行高优先级线程的概率更大一点
-
-可使用**setPriority( )**设置优先级（范围：0-10）
-
-Jdk预设了3个优先级值： 
-123MIN_PRIORITY &#x3D; 1NORM_PRIORITY &#x3D; 5MAX_PRIO...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/16/thread-02/'>
             阅读全文
           </a>
         </div>
