@@ -4,13 +4,44 @@
   
     
     <entry>
-      <title></title>
+      <title>五四（2021）</title>
+      <link href="2021/05/05/20210504/"/>
+      <url>2021/05/05/20210504/</url>
+      
+        <content type="html"><![CDATA[<h2 id="人生"><a href="#人生" class="headerlink" title="人生"></a>人生</h2><p>人生是什么？</p><p>我不能给你，你想要的答案。</p><p>我们身处共同的世界，可轨迹却不甚相似。每个人都有每个人梦想，以及自以为是的答案，背负人生的十字架匍匐前行。</p><p>告一段落。</p><p>我常调侃我此后的老年生活（老年三部曲）：</p><ul><li>50岁《老了》</li><li>60岁《没用了》</li><li>70岁《来华信了》</li></ul><h2 id="活着"><a href="#活着" class="headerlink" title="活着"></a>活着</h2><p>为什么活着，怎样的活着？</p><p>岁月很美好，人世很艰难。</p><p>为吃饭而活着，为工作而活着？</p><p>为自己而活着，健康幸福这就足够了。</p><h2 id="选择与努力"><a href="#选择与努力" class="headerlink" title="选择与努力"></a>选择与努力</h2><p>选择大于努力？相信这已为众所周知。我并不打算反驳它。</p><p>如何选择，又如何努力？</p><p>要明白不是所有人都有选择的机会。</p><p>心中有梦想，脚下有力量。在路上，努力着，也就有了选择的机会或者说是余地，同时避免了不堪。</p><p>也就是说所谓的选择大于努力，仅仅是在你拥有<strong>选择</strong>的机会时才能发挥效应，而选择的机会又为努力的结果。</p><p>以下面这张图为例：</p><p>黑色框外或许无法选择，只有到了黄色框内为了接近绿色框才有机会选择。</p><p>可是，你是否忽略了一点，我们为什么要选择，你要知道你的目标是什么？而不是从无谓的A、B、C、D中选择什么，</p><p>如果你的目标只是黑框外的带问号的绿圈，那么你为什么要参与这无谓的选择？</p><p><img src="http://img.lbkzw.cn/img/%E9%80%89%E6%8B%A9&&%E5%8A%AA%E5%8A%9B.png" class="lazyload" data-srcset="http://img.lbkzw.cn/img/%E9%80%89%E6%8B%A9&&%E5%8A%AA%E5%8A%9B.png" srcset="data:image/png;base64,666" alt="选择&amp;&amp;努力"></p><p>明者自明。</p><h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 独钓寒江雪 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>anaconda入门</title>
       <link href="2021/03/20/Python-1/"/>
       <url>2021/03/20/Python-1/</url>
       
-        <content type="html"><![CDATA[<h1 id="Python机器学习"><a href="#Python机器学习" class="headerlink" title="Python机器学习"></a>Python机器学习</h1><p>刚刚接触机器学习，接触Python已久。</p><h2 id="anaconda"><a href="#anaconda" class="headerlink" title="anaconda"></a>anaconda</h2><blockquote><p>安装不做介绍，下载链接<a href="https://anaconda.en.softonic.com/">https://anaconda.en.softonic.com/</a></p></blockquote><ol><li>环境命令：</li></ol><p>创建一个名称为python37的虚拟环境并指定python版本为3.7 ：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda  create -n python37 python=<span class="number">3.7</span></span><br></pre></td></tr></table></figure><p>查看环境：<code>conda info --envs</code></p><p>激活某个环境：<code>activate python34</code></p><ol start="2"><li>包命令</li></ol><p>安装包：<code>conda install package_name</code></p><p>卸载包：<code>conda remove pandas</code></p><p>更新包：<code>conda update package_name</code></p><ol start="3"><li>Pycharm 配置anaconda</li></ol><p>File -&gt; Settings<br><img src="http://img.lbkzw.cn/img/20190105173256159.png" class="lazyload" data-srcset="http://img.lbkzw.cn/img/20190105173256159.png" srcset="data:image/png;base64,666" alt="20190105173256159"></p><p><img src="http://img.lbkzw.cn/img/20190105173419992.png" class="lazyload" data-srcset="http://img.lbkzw.cn/img/20190105173419992.png" srcset="data:image/png;base64,666" alt="20190105173419992"></p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>安装不做介绍，下载链接<a href="https://anaconda.en.softonic.com/">https://anaconda.en.softonic.com/</a></p></blockquote><ol><li>环境命令：</li></ol><p>创建一个名称为python37的虚拟环境并指定python版本为3.7 ：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda  create -n python37 python=<span class="number">3.7</span></span><br></pre></td></tr></table></figure><p>查看环境：<code>conda info --envs</code></p><p>激活某个环境：<code>conda activate python34</code></p><ol start="2"><li>包命令</li></ol><p>安装包：<code>conda install package_name</code></p><p>卸载包：<code>conda remove pandas</code></p><p>更新包：<code>conda update package_name</code></p><ol start="3"><li>Pycharm 配置anaconda</li></ol><p>File -&gt; Settings<br><img src="http://img.lbkzw.cn/img/20190105173256159.png" class="lazyload" data-srcset="http://img.lbkzw.cn/img/20190105173256159.png" srcset="data:image/png;base64,666" alt="20190105173256159"></p><p><img src="http://img.lbkzw.cn/img/20190105173419992.png" class="lazyload" data-srcset="http://img.lbkzw.cn/img/20190105173419992.png" srcset="data:image/png;base64,666" alt="20190105173419992"></p>]]></content>
       
       
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> anaconda </tag>
+            
+        </tags>
       
     </entry>
     

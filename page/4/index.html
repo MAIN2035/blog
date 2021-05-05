@@ -360,6 +360,65 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/10/16/jvm-01/">
+        运行时数据区域
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        运行时数据区域
+
+
+
+
+程序计数器：每个线程都有一个程序计数器，它指示当前线程所执行字节码的行号
+
+Java虚拟机栈：每个方法执行时均会创建一个栈帧，其存储局部变量表（基本类型与对象引用）、操作数栈、动态连接、方法出口等信息
+
+本地方法栈：与Java虚拟机栈类似，其为本地方法服务
+
+Java堆（GC堆）：在虚拟机运行时创建用以存放对象实例，且为所有线程共享。
+
+方法区：存储已被虚拟机加载的类...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-10-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Java/">Java</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/10/16/jvm-01/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/10/16/js-05/">
         JS数组
       </a>
@@ -789,53 +848,6 @@ idea中运行结果为绿色就是运行成功，红色则失败。
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/16/Javadm-02/">
-        单例模式
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        最简单的设计模式，它是一种仅提供一个对象实例的方法。
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849interface Resource &#123;    int getValue();    void setValue(int x);&#125;/** 由于...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/16/Javadm-02/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -969,6 +981,11 @@ idea中运行结果为绿色就是运行成功，红色则失败。
             ><div class='name'>JavaWeb</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
+            title="/categories/Python/" href="/categories/Python/"
+            id="categoriesPython"
+            ><div class='name'>Python</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
             title="/categories/SQL/" href="/categories/SQL/"
             id="categoriesSQL"
             ><div class='name'>SQL</div><div class='badge'>(1)</div></a></li>
@@ -998,6 +1015,11 @@ idea中运行结果为绿色就是运行成功，红色则失败。
             id="categoriesE6B299E99B95E697A5E8AEB0"
             ><div class='name'>沙雕日记</div><div class='badge'>(1)</div></a></li>
         
+          <li><a class="flat-box"
+            title="/categories/%E7%8B%AC%E9%92%93%E5%AF%92%E6%B1%9F%E9%9B%AA/" href="/categories/%E7%8B%AC%E9%92%93%E5%AF%92%E6%B1%9F%E9%9B%AA/"
+            id="categoriesE78BACE99293E5AF92E6B19FE99BAA"
+            ><div class='name'>独钓寒江雪</div><div class='badge'>(1)</div></a></li>
+        
       </ul>
     </div>
   </section>
@@ -1020,7 +1042,7 @@ idea中运行结果为绿色就是运行成功，红色则失败。
 
 
     <div class='content'>
-      <a href="/tags/AOP/" style="font-size: 14px; color: #999">AOP</a> <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/Cookie/" style="font-size: 14px; color: #999">Cookie</a> <a href="/tags/EffectiveJava/" style="font-size: 14px; color: #999">EffectiveJava</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS%E5%9F%BA%E7%A1%80/" style="font-size: 21.5px; color: #666">JS基础</a> <a href="/tags/JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 14px; color: #999">JVM虚拟机</a> <a href="/tags/Java/" style="font-size: 21.5px; color: #666">Java</a> <a href="/tags/JavaWeb/" style="font-size: 14px; color: #999">JavaWeb</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 24px; color: #555">Java基础</a> <a href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/" style="font-size: 21.5px; color: #666">Java多线程编程</a> <a href="/tags/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 19px; color: #777">Java设计模式</a> <a href="/tags/Jsp/" style="font-size: 14px; color: #999">Jsp</a> <a href="/tags/Jvm%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 16.5px; color: #888">Jvm虚拟机</a> <a href="/tags/SQL%E5%85%A5%E9%97%A8/" style="font-size: 14px; color: #999">SQL入门</a> <a href="/tags/Session/" style="font-size: 14px; color: #999">Session</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/mysql/" style="font-size: 14px; color: #999">mysql</a> <a href="/tags/shell/" style="font-size: 14px; color: #999">shell</a> <a href="/tags/sql/" style="font-size: 14px; color: #999">sql</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16.5px; color: #888">数据结构</a>
+      <a href="/tags/AOP/" style="font-size: 14px; color: #999">AOP</a> <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/Cookie/" style="font-size: 14px; color: #999">Cookie</a> <a href="/tags/EffectiveJava/" style="font-size: 14px; color: #999">EffectiveJava</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS%E5%9F%BA%E7%A1%80/" style="font-size: 21.5px; color: #666">JS基础</a> <a href="/tags/JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 14px; color: #999">JVM虚拟机</a> <a href="/tags/Java/" style="font-size: 21.5px; color: #666">Java</a> <a href="/tags/JavaWeb/" style="font-size: 14px; color: #999">JavaWeb</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 24px; color: #555">Java基础</a> <a href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B/" style="font-size: 21.5px; color: #666">Java多线程编程</a> <a href="/tags/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 19px; color: #777">Java设计模式</a> <a href="/tags/Jsp/" style="font-size: 14px; color: #999">Jsp</a> <a href="/tags/Jvm%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 16.5px; color: #888">Jvm虚拟机</a> <a href="/tags/SQL%E5%85%A5%E9%97%A8/" style="font-size: 14px; color: #999">SQL入门</a> <a href="/tags/Session/" style="font-size: 14px; color: #999">Session</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/anaconda/" style="font-size: 14px; color: #999">anaconda</a> <a href="/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/tags/github/" style="font-size: 14px; color: #999">github</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/mysql/" style="font-size: 14px; color: #999">mysql</a> <a href="/tags/shell/" style="font-size: 14px; color: #999">shell</a> <a href="/tags/sql/" style="font-size: 14px; color: #999">sql</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16.5px; color: #888">数据结构</a>
     </div>
   </section>
 
